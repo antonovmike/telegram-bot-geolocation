@@ -36,8 +36,8 @@ fn kofe_list() -> [CoffeeHouse; 25] {
             schedule: String::from("c 8:00 до 2:00"),
             address: String::from("Merab Kostava St. 14"),
             insta: String::from("https://www.instagram.com/cafe.stamba/"),
-            location_x: 41.705746, // MISATAKE? ЭТО ОТЕЛЬ
-            location_y: 44.787971, // MISATAKE?
+            location_x: 41.705732,
+            location_y: 44.787975,
         },
         CoffeeHouse {
             name: String::from("Гардения Шеварнадзе"),
@@ -45,8 +45,8 @@ fn kofe_list() -> [CoffeeHouse; 25] {
             schedule: String::from("c 10:00 до 18:00"),
             address: String::from("Khudadovi, 38"),
             insta: String::from("https://www.instagram.com/gardeniashevardnadze/"),
-            location_x: -0.1278f32, // London
-            location_y: 51.5074f32, // London
+            location_x: 41.731023,
+            location_y: 44.830517,
         },
         CoffeeHouse {
             name: String::from("Фабрика"),
@@ -54,8 +54,8 @@ fn kofe_list() -> [CoffeeHouse; 25] {
             schedule: String::from("c 11-12, Milk будням открывается с 9"),
             address: String::from("NINOSHVILI STR.8"),
             insta: String::from("http://instagram.com/fabrika_tbilisi/"),
-            location_x: 41.709530, // MISATAKE? ЭТО ОТЕЛЬ
-            location_y: 44.802610, // MISATAKE?
+            location_x: 41.709530,
+            location_y: 44.802610,
         },
         CoffeeHouse {
             name: String::from("Erti Kava"),
@@ -90,8 +90,8 @@ fn kofe_list() -> [CoffeeHouse; 25] {
             schedule: String::from("круглосуточно"),
             address: String::from("23-23a Chavchavadze Ave"),
             insta: String::from("https://www.instagram.com/luicoffee/"),
-            location_x: 41.709431, // MISATAKE?
-            location_y: 44.775005, // MISATAKE?
+            location_x: 41.709292,
+            location_y: 44.768015,
         },
         CoffeeHouse {
             name: String::from("Kikliko"),
@@ -162,8 +162,8 @@ fn kofe_list() -> [CoffeeHouse; 25] {
             schedule: String::from("с 8 до 12"),
             address: String::from("4 Kote Afkhazi St"),
             insta: String::from("https://www.instagram.com/dailygrindtbilisi/"),
-            location_x: 41.693152, // MISATAKE?
-            location_y: 44.802658, // MISATAKE?
+            location_x: 41.693138,
+            location_y: 44.802658,
         },
         CoffeeHouse {
             name: String::from("Black Cup x Valiko Bar"),
@@ -180,8 +180,8 @@ fn kofe_list() -> [CoffeeHouse; 25] {
             schedule: String::from("с 10 до 21:00"),
             address: String::from("6 Niaghvari St"),
             insta: String::from("https://www.instagram.com/eleven.window/"),
-            location_x: 41.695242, // MISATAKE?
-            location_y: 44.793238, // MISATAKE?
+            location_x: 41.695242,
+            location_y: 44.793238,
         },
         CoffeeHouse {
             name: String::from("Nur"),
@@ -198,8 +198,8 @@ fn kofe_list() -> [CoffeeHouse; 25] {
             schedule: String::from("с 8:30 до 18:30 (по выходным работают до 21)"),
             address: String::from("Ilia Chavchavadze 27"),
             insta: String::from("https://www.instagram.com/lamarzoccoespressobar/"),
-            location_x: -0.1278f32, // LONDON
-            location_y: 51.5074f32, // LONDON
+            location_x: 41.710275,
+            location_y: 44.766336,
         },
         CoffeeHouse {
             name: String::from("Jupiter"),
