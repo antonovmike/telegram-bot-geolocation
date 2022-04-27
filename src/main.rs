@@ -260,6 +260,8 @@ fn kofe_list() -> [CoffeeHouse; 25] {
 }
 
 fn distance(lat_user: f32, lon_user: f32) -> String {
+    dbg!(&lat_user);
+    dbg!(&lon_user);
     let mut temporary_collection = vec![];
 
     let point_user = point!(x: lat_user, y: lon_user);
@@ -267,14 +269,14 @@ fn distance(lat_user: f32, lon_user: f32) -> String {
     for index in 0..kofe_list().len() {
         let point_destination = point!(x: kofe_list()[index].location_x, y: kofe_list()[index].location_y);
         let calculated_distance: i32 = point_user.haversine_distance(&point_destination).round() as i32;
-        temporary_collection.push(calculated_distance);
+        temporary_collection.push((calculated_distance, kofe_list()[index].description.clone()));
     }
-
-    temporary_collection.sort();
-    temporary_collection[0].to_string()
+    temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
+    temporary_collection[0].1.to_string()
 }
 
 async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), ExecuteError> {
+    dbg!(&message);
     if let MessageData::Location(location) = message.data {
         let lon = location.longitude;
         let lat = location.latitude;
@@ -282,6 +284,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         let method = SendMessage::new(chat_id, calculated_distance);
         api.execute(method).await?;
     };
+    dbg!("F");
     Ok(())
 }
 
