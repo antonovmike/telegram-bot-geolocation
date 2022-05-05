@@ -38,7 +38,7 @@ Stamba cafe
 Адрес: Merab Kostava St. 14
 Инстаграм: https://www.instagram.com/cafe.stamba
 Google maps: https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/stamba_cafe.png"),
             location_x: 41.705732,
             location_y: 44.787975,
         },
@@ -50,7 +50,7 @@ Google maps: https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
 Адрес: Khudadovi, 38
 Инстаграм: https://www.instagram.com/gardeniashevardnadze
 Google maps: https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/gardeniya_shevarnadze.png"),
             location_x: 41.731023,
             location_y: 44.830517,
         },
@@ -62,7 +62,7 @@ Google maps: https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
 Адрес: Ninoshvili str.8
 Инстаграм: http://instagram.com/fabrika_tbilisi
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/fabrika.png"),
             location_x: 41.709530,
             location_y: 44.802610,
         },
@@ -74,7 +74,7 @@ Erti Kava
 Адрес: Mitropan Laghidze St, 8
 Инстаграм: http://instagram.com/ertikava_coffeeroom
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/erti_kava.png"),
             location_x: 41.698988,
             location_y: 44.795367,
         },
@@ -86,7 +86,7 @@ Stories
 Адрес: 9 Galaktion Tabidze St
 Инстаграм: https://www.instagram.com/stories.tbilisi/?hl=en
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/stories.png"),
             location_x: 41.691689,
             location_y: 44.801089,
         },
@@ -98,7 +98,7 @@ Coffee Lab
 Адрес: 27 Alexander Kazbegi Ave
 Инстаграм: https://www.instagram.com/coffeelabgeorgia/?hl=en
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/coffee_lab.png"),
             location_x: 41.725648,
             location_y: 44.754978,
         },
@@ -110,7 +110,7 @@ Luicoffee
 Адрес: 23-23a Chavchavadze Ave
 Инстаграм: https://www.instagram.com/luicoffee
 Google maps: https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/luicoffee.png"),
             location_x: 41.709292,
             location_y: 44.768015,
         },
@@ -122,7 +122,7 @@ Kikliko переводится как «кукареку». Это традиц�
 Адрес: 28 Mtskheta St
 Инстаграм: https://www.instagram.com/kikliko_
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/kikliko.png"),
             location_x: 41.705725,
             location_y: 44.769619,
         },
@@ -134,7 +134,7 @@ Lolita
 Адрес: 7 Tamar Chovelidze St
 Инстаграм: https://www.instagram.com/lolita.tbilisi
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/lolita.png"),
             location_x: 41.705671,
             location_y: 44.786925,
         },
@@ -146,7 +146,7 @@ Maria Magdalena
 Адрес: 5 Mikheil Zandukeli Dead End
 Инстаграм: https://www.instagram.com/mariamagdalina.tbilisi
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/maria_magdalena.png"),
             location_x: 41.704922,
             location_y: 44.788100,
         },
@@ -158,7 +158,7 @@ Kikodze
 Адрес: 1 Vasil Petriashvili Street
 Инстаграм: https://www.instagram.com/kikodzebar
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/kikodze.png"),
             location_x: 41.708215,
             location_y: 44.788091,
         },
@@ -170,7 +170,7 @@ Shavi Coffee
 Адрес: 40 Zandukeli Street
 Инстаграм: https://www.instagram.com/shavi.coffee
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/shavi_coffee.png"),
             location_x: 41.704129,
             location_y: 44.784089,
         },
@@ -182,7 +182,7 @@ PULP
 Адрес: 22 Simon Janashia
 Инстаграм: https://www.instagram.com/pulp.tbilisi/?hl=en
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/pulp.png"),
             location_x: 41.705987,
             location_y: 44.781482,
         },
@@ -194,7 +194,7 @@ They said books
 Адрес: 10 Giorgi Akhvlediani St
 Инстаграм: https://www.instagram.com/theysaidbooks.coffeeshop
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/they_said_books.png"),
             location_x: 41.705315,
             location_y: 44.789875,
         },
@@ -206,7 +206,7 @@ Daily grind
 Адрес: 4 Kote Afkhazi St
 Инстаграм: https://www.instagram.com/dailygrindtbilisi
 Google maps: https://goo.gl/maps/X4DbGjH63gpp91m19"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/daily_grind.png"),
             location_x: 41.693138,
             location_y: 44.802658,
         },
@@ -218,7 +218,7 @@ Black Cup x Valiko Bar
 Адрес: 24 Galaktion Tabidze Street
 Инстаграм: https://www.instagram.com/valiko.mansion
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/black_cup_x_valiko_bar.png"),
             location_x: 41.689804,
             location_y: 44.801400,
         },
@@ -230,7 +230,7 @@ Eleven.window
 Адрес: 6 Niaghvari St
 Инстаграм: https://www.instagram.com/eleven.window
 Google maps: https://goo.gl/maps/pxGFnwdBR1SbbKmX6"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/eleven_window.png"),
             location_x: 41.695242,
             location_y: 44.793238,
         },
@@ -242,7 +242,7 @@ Nur
 Адрес: Lado Kavsadze 7
 Инстаграм: https://www.instagram.com/nur_coffeeshop
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/nur.png"),
             location_x: 41.708684,
             location_y: 44.761402,
         },
@@ -254,7 +254,7 @@ Lamarzocco
 Адрес: Ilia Chavchavadze 27
 Инстаграм: https://www.instagram.com/lamarzoccoespressobar
 Google maps: https://goo.gl/maps/oRNzGXPBcths3eDL6"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/lamarzocco.png"),
             location_x: 41.710275,
             location_y: 44.766336,
         },
@@ -266,7 +266,7 @@ Jupiter
 Адрес: Ivane Machabeli 4
 Инстаграм: https://www.instagram.com/jupiter.tbilisi
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/jupiter.png"),
             location_x: 41.692065,
             location_y: 44.799947,
         },
@@ -278,7 +278,7 @@ Sol • სოლ
 Адрес: 28 Vasil Petriashvili Street
 Инстаграм: https://www.instagram.com/sol.tbilisi/?hl=ru
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/sol.png"),
             location_x: 41.705638,
             location_y: 44.779638,
         },
@@ -290,7 +290,7 @@ Mondo Coffee
 Адрес: 13 a Ivane Tarkhnishvili St
 Инстаграм: https://www.instagram.com/mondogeorgia
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/mondo_coffee.png"),
             location_x: 41.706474,
             location_y: 44.783221,
         },
@@ -302,7 +302,7 @@ Shukura
 Адрес: 49 Irakli Abashidze Street
 Инстаграм: https://www.instagram.com/shukura.coffee/?hl=ru
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/shukura.png"),
             location_x: 41.708367,
             location_y: 44.760192,
         },
@@ -314,7 +314,7 @@ Erti Kava
 Адрес: 81 Irakli Abashidze Street
 Инстаграм: http://instagram.com/ertikava_coffeeroom/?hl=en
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/erti_kava.png"),
             location_x: 41.708954,
             location_y: 44.755021,
         },
@@ -326,7 +326,7 @@ Books from past
 Адрес: 10 Giorgi Akhvlediani St, flat 2
 Инстаграм: https://www.instagram.com/booksfrompast.shop
 Google maps: "),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/books_from_past.png"),
             location_x: 41.705389,
             location_y: 44.789874,
         },
@@ -338,7 +338,7 @@ Depo
 Адрес: Shalva Ghambashldze, 10
 Инстаграм: https://www.instagram.com/depo.tbilisi/
 Google maps: https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/depo.png"),
             location_x: 41.708348,
             location_y: 44.784006,
         },
@@ -350,7 +350,7 @@ ComUNITY of specialty coffee admirers — указано в инстаграме
 Адрес: Shalva Dadiani, 20
 Инстаграм: https://www.instagram.com/unity_kava/
 Google maps: https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/unity_kava.png"),
             location_x: 41.691128,
             location_y: 44.802190,
         },
@@ -362,7 +362,7 @@ APC
 Адрес: 10 I.Abashidze 
 Инстаграм: https://www.instagram.com/apc.georgia/
 Google maps: https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/apc.png"),
             location_x: 41.706840,
             location_y: 44.772267,
         },
@@ -374,7 +374,7 @@ Sablée
 Адрес: Kekelidze street 1
 Фейсбук: https://www.facebook.com/sableebakery/
 Google maps: https://goo.gl/maps/SqyQqSWqJLPBhq298"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/sablee.png"),
             location_x: 41.708389,
             location_y: 44.778489,
         },
@@ -386,7 +386,7 @@ Groovy roasters
 Адрес: Ninoshvili 17
 Инстаграм: https://www.instagram.com/groovyroasters/
 Google maps: https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
-            photo: String::from("src/resources/template.png"),
+            photo: String::from("src/resources/groovy_roasters.png"),
             location_x: 41.711521,
             location_y: 44.801714,
         },
@@ -404,10 +404,11 @@ fn distance(lat_user: f32, lon_user: f32) -> String {
     for index in 0..kofe_list().len() {
         let point_destination = point!(x: kofe_list()[index].location_x, y: kofe_list()[index].location_y);
         let calculated_distance: i32 = point_user.haversine_distance(&point_destination).round() as i32;
-        temporary_collection.push((calculated_distance, kofe_list()[index].description.clone()));
+        //temporary_collection.push((calculated_distance, kofe_list()[index].description.clone() ));
+        temporary_collection.push((calculated_distance, kofe_list()[index].description.clone(), kofe_list()[index].photo.clone() ));
     }
     temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
-    let three = format!("{}\n{}\n{}", temporary_collection[0].1, temporary_collection[1].1, temporary_collection[2].1);
+    let three = format!("{}\n{}\n{}\n{}\n{}\n{}", temporary_collection[0].1, temporary_collection[0].2, temporary_collection[1].1, temporary_collection[1].2, temporary_collection[2].1, temporary_collection[2].2);
     three
 }
 
@@ -421,7 +422,8 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         api.execute(method).await?;
 		let method = SendPhoto::new(
 			chat_id, 
-			InputFile::path("src/resources/template.png")
+			//InputFile::path("src/resources/template.png")
+			InputFile::path(kofe_list()[1].photo.clone())
 				.await
 				.unwrap(),
 		);
