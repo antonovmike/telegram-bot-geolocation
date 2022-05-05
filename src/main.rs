@@ -394,7 +394,7 @@ Google maps: https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
     kmk
 }
 
-fn distance(lat_user: f32, lon_user: f32) -> String {
+fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, String, String) {
     // dbg!(&lat_user);
     // dbg!(&lon_user);
     let mut temporary_collection = vec![];
@@ -408,8 +408,12 @@ fn distance(lat_user: f32, lon_user: f32) -> String {
         temporary_collection.push((calculated_distance, kofe_list()[index].description.clone(), kofe_list()[index].photo.clone() ));
     }
     temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
-    let three = format!("{}\n{}\n{}\n{}\n{}\n{}", temporary_collection[0].1, temporary_collection[0].2, temporary_collection[1].1, temporary_collection[1].2, temporary_collection[2].1, temporary_collection[2].2);
-    three
+    //let three = format!("{}\n{}\n{}\n{}\n{}\n{}", temporary_collection[0].1, temporary_collection[0].2, temporary_collection[1].1, temporary_collection[1].2, temporary_collection[2].1, temporary_collection[2].2);
+    //three
+    let one = format!("{}\n", temporary_collection[0].1);
+    let two = format!("{}\n", temporary_collection[1].1);
+    let three = format!("{}\n", temporary_collection[2].1);
+    (one, temporary_collection[0].2.clone(), two, temporary_collection[1].2.clone(), three, temporary_collection[2].2.clone())
 }
 
 async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), ExecuteError> {
@@ -418,12 +422,35 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         let lon = location.longitude;
         let lat = location.latitude;
         let calculated_distance = distance(lon, lat);
-        let method = SendMessage::new(chat_id.clone(), calculated_distance);
+// 1
+        let method = SendMessage::new(chat_id.clone(), calculated_distance.0);
         api.execute(method).await?;
 		let method = SendPhoto::new(
-			chat_id, 
+			chat_id.clone(), 
 			//InputFile::path("src/resources/template.png")
-			InputFile::path(kofe_list()[1].photo.clone())
+			InputFile::path(calculated_distance.1)
+				.await
+				.unwrap(),
+		);
+		api.execute(method).await?;
+// 2
+		let method = SendMessage::new(chat_id.clone(), calculated_distance.2);
+        api.execute(method).await?;
+        let method = SendPhoto::new(
+			chat_id.clone(), 
+			//InputFile::path("src/resources/template.png")
+			InputFile::path(calculated_distance.3)
+				.await
+				.unwrap(),
+		);
+		api.execute(method).await?;
+// 3
+		let method = SendMessage::new(chat_id.clone(), calculated_distance.4);
+        api.execute(method).await?;
+        let method = SendPhoto::new(
+			chat_id.clone(), 
+			//InputFile::path("src/resources/template.png")
+			InputFile::path(calculated_distance.5)
 				.await
 				.unwrap(),
 		);
