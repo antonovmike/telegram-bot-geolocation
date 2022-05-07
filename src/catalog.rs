@@ -22,7 +22,7 @@ Stamba cafe
 Адрес: Merab Kostava St. 14
 Инстаграм: https://www.instagram.com/cafe.stamba
 Google maps: https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
-            photo: String::from("src/resources/stamba_cafe.png"),
+            photo: String::from("src/resources/stamba_cafe.jpg"),
             location_x: 41.705732,
             location_y: 44.787975,
         },
@@ -34,7 +34,7 @@ Google maps: https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
 Адрес: Khudadovi, 38
 Инстаграм: https://www.instagram.com/gardeniashevardnadze
 Google maps: https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
-            photo: String::from("src/resources/gardeniya_shevarnadze.png"),
+            photo: String::from("src/resources/gardeniya_shevarnadze.jpg"),
             location_x: 41.731023,
             location_y: 44.830517,
         },
@@ -46,7 +46,7 @@ Google maps: https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
 Адрес: Ninoshvili str.8
 Инстаграм: http://instagram.com/fabrika_tbilisi
 Google maps: "),
-            photo: String::from("src/resources/fabrika.png"),
+            photo: String::from("src/resources/fabrika.jpg"),
             location_x: 41.709530,
             location_y: 44.802610,
         },
@@ -58,7 +58,7 @@ Erti Kava
 Адрес: Mitropan Laghidze St, 8
 Инстаграм: http://instagram.com/ertikava_coffeeroom
 Google maps: "),
-            photo: String::from("src/resources/erti_kava.png"),
+            photo: String::from("src/resources/erti_kava.jpg"),
             location_x: 41.698988,
             location_y: 44.795367,
         },
@@ -70,7 +70,7 @@ Stories
 Адрес: 9 Galaktion Tabidze St
 Инстаграм: https://www.instagram.com/stories.tbilisi/?hl=en
 Google maps: "),
-            photo: String::from("src/resources/stories.png"),
+            photo: String::from("src/resources/stories.jpg"),
             location_x: 41.691689,
             location_y: 44.801089,
         },
@@ -82,7 +82,7 @@ Coffee Lab
 Адрес: 27 Alexander Kazbegi Ave
 Инстаграм: https://www.instagram.com/coffeelabgeorgia/?hl=en
 Google maps: "),
-            photo: String::from("src/resources/coffee_lab.png"),
+            photo: String::from("src/resources/coffee_lab.jpg"),
             location_x: 41.725648,
             location_y: 44.754978,
         },
@@ -94,7 +94,7 @@ Luicoffee
 Адрес: 23-23a Chavchavadze Ave
 Инстаграм: https://www.instagram.com/luicoffee
 Google maps: https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
-            photo: String::from("src/resources/luicoffee.png"),
+            photo: String::from("src/resources/luicoffee.jpg"),
             location_x: 41.709292,
             location_y: 44.768015,
         },
@@ -106,7 +106,7 @@ Kikliko переводится как «кукареку». Это традиц�
 Адрес: 28 Mtskheta St
 Инстаграм: https://www.instagram.com/kikliko_
 Google maps: "),
-            photo: String::from("src/resources/kikliko.png"),
+            photo: String::from("src/resources/kikliko.jpg"),
             location_x: 41.705725,
             location_y: 44.769619,
         },
@@ -118,7 +118,7 @@ Lolita
 Адрес: 7 Tamar Chovelidze St
 Инстаграм: https://www.instagram.com/lolita.tbilisi
 Google maps: "),
-            photo: String::from("src/resources/lolita.png"),
+            photo: String::from("src/resources/lolita.jpg"),
             location_x: 41.705671,
             location_y: 44.786925,
         },
@@ -130,7 +130,7 @@ Maria Magdalena
 Адрес: 5 Mikheil Zandukeli Dead End
 Инстаграм: https://www.instagram.com/mariamagdalina.tbilisi
 Google maps: "),
-            photo: String::from("src/resources/maria_magdalena.png"),
+            photo: String::from("src/resources/maria_magdalena.jpg"),
             location_x: 41.704922,
             location_y: 44.788100,
         },
@@ -142,7 +142,7 @@ Kikodze
 Адрес: 1 Vasil Petriashvili Street
 Инстаграм: https://www.instagram.com/kikodzebar
 Google maps: "),
-            photo: String::from("src/resources/kikodze.png"),
+            photo: String::from("src/resources/kikodze.jpg"),
             location_x: 41.708215,
             location_y: 44.788091,
         },
@@ -154,7 +154,7 @@ Shavi Coffee
 Адрес: 40 Zandukeli Street
 Инстаграм: https://www.instagram.com/shavi.coffee
 Google maps: "),
-            photo: String::from("src/resources/shavi_coffee.png"),
+            photo: String::from("src/resources/shavi_coffee.jpg"),
             location_x: 41.704129,
             location_y: 44.784089,
         },
@@ -166,7 +166,7 @@ PULP
 Адрес: 22 Simon Janashia
 Инстаграм: https://www.instagram.com/pulp.tbilisi/?hl=en
 Google maps: "),
-            photo: String::from("src/resources/pulp.png"),
+            photo: String::from("src/resources/pulp.jpg"),
             location_x: 41.705987,
             location_y: 44.781482,
         },
@@ -178,7 +178,7 @@ They said books
 Адрес: 10 Giorgi Akhvlediani St
 Инстаграм: https://www.instagram.com/theysaidbooks.coffeeshop
 Google maps: "),
-            photo: String::from("src/resources/they_said_books.png"),
+            photo: String::from("src/resources/they_said_books.jpg"),
             location_x: 41.705315,
             location_y: 44.789875,
         },
@@ -190,7 +190,7 @@ Daily grind
 Адрес: 4 Kote Afkhazi St
 Инстаграм: https://www.instagram.com/dailygrindtbilisi
 Google maps: https://goo.gl/maps/X4DbGjH63gpp91m19"),
-            photo: String::from("src/resources/daily_grind.png"),
+            photo: String::from("src/resources/daily_grind.jpg"),
             location_x: 41.693138,
             location_y: 44.802658,
         },
@@ -202,7 +202,7 @@ Black Cup x Valiko Bar
 Адрес: 24 Galaktion Tabidze Street
 Инстаграм: https://www.instagram.com/valiko.mansion
 Google maps: "),
-            photo: String::from("src/resources/black_cup_x_valiko_bar.png"),
+            photo: String::from("src/resources/black_cup_x_valiko_bar.jpg"),
             location_x: 41.689804,
             location_y: 44.801400,
         },
@@ -214,7 +214,7 @@ Eleven.window
 Адрес: 6 Niaghvari St
 Инстаграм: https://www.instagram.com/eleven.window
 Google maps: https://goo.gl/maps/pxGFnwdBR1SbbKmX6"),
-            photo: String::from("src/resources/eleven_window.png"),
+            photo: String::from("src/resources/eleven_window.jpg"),
             location_x: 41.695242,
             location_y: 44.793238,
         },
@@ -226,7 +226,7 @@ Nur
 Адрес: Lado Kavsadze 7
 Инстаграм: https://www.instagram.com/nur_coffeeshop
 Google maps: "),
-            photo: String::from("src/resources/nur.png"),
+            photo: String::from("src/resources/nur.jpg"),
             location_x: 41.708684,
             location_y: 44.761402,
         },
@@ -238,7 +238,7 @@ Lamarzocco
 Адрес: Ilia Chavchavadze 27
 Инстаграм: https://www.instagram.com/lamarzoccoespressobar
 Google maps: https://goo.gl/maps/oRNzGXPBcths3eDL6"),
-            photo: String::from("src/resources/lamarzocco.png"),
+            photo: String::from("src/resources/lamarzocco.jpg"),
             location_x: 41.710275,
             location_y: 44.766336,
         },
@@ -250,7 +250,7 @@ Jupiter
 Адрес: Ivane Machabeli 4
 Инстаграм: https://www.instagram.com/jupiter.tbilisi
 Google maps: "),
-            photo: String::from("src/resources/jupiter.png"),
+            photo: String::from("src/resources/jupiter.jpg"),
             location_x: 41.692065,
             location_y: 44.799947,
         },
@@ -262,7 +262,7 @@ Sol • სოლ
 Адрес: 28 Vasil Petriashvili Street
 Инстаграм: https://www.instagram.com/sol.tbilisi/?hl=ru
 Google maps: "),
-            photo: String::from("src/resources/sol.png"),
+            photo: String::from("src/resources/sol.jpg"),
             location_x: 41.705638,
             location_y: 44.779638,
         },
@@ -274,7 +274,7 @@ Mondo Coffee
 Адрес: 13 a Ivane Tarkhnishvili St
 Инстаграм: https://www.instagram.com/mondogeorgia
 Google maps: "),
-            photo: String::from("src/resources/mondo_coffee.png"),
+            photo: String::from("src/resources/mondo_coffee.jpg"),
             location_x: 41.706474,
             location_y: 44.783221,
         },
@@ -286,7 +286,7 @@ Shukura
 Адрес: 49 Irakli Abashidze Street
 Инстаграм: https://www.instagram.com/shukura.coffee/?hl=ru
 Google maps: "),
-            photo: String::from("src/resources/shukura.png"),
+            photo: String::from("src/resources/shukura.jpg"),
             location_x: 41.708367,
             location_y: 44.760192,
         },
@@ -298,7 +298,7 @@ Erti Kava
 Адрес: 81 Irakli Abashidze Street
 Инстаграм: http://instagram.com/ertikava_coffeeroom/?hl=en
 Google maps: "),
-            photo: String::from("src/resources/erti_kava.png"),
+            photo: String::from("src/resources/erti_kava.jpg"),
             location_x: 41.708954,
             location_y: 44.755021,
         },
@@ -310,7 +310,7 @@ Books from past
 Адрес: 10 Giorgi Akhvlediani St, flat 2
 Инстаграм: https://www.instagram.com/booksfrompast.shop
 Google maps: "),
-            photo: String::from("src/resources/books_from_past.png"),
+            photo: String::from("src/resources/books_from_past.jpg"),
             location_x: 41.705389,
             location_y: 44.789874,
         },
@@ -322,7 +322,7 @@ Depo
 Адрес: Shalva Ghambashldze, 10
 Инстаграм: https://www.instagram.com/depo.tbilisi/
 Google maps: https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
-            photo: String::from("src/resources/depo.png"),
+            photo: String::from("src/resources/depo.jpg"),
             location_x: 41.708348,
             location_y: 44.784006,
         },
@@ -334,7 +334,7 @@ ComUNITY of specialty coffee admirers — указано в инстаграме
 Адрес: Shalva Dadiani, 20
 Инстаграм: https://www.instagram.com/unity_kava/
 Google maps: https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
-            photo: String::from("src/resources/unity_kava.png"),
+            photo: String::from("src/resources/unity_kava.jpg"),
             location_x: 41.691128,
             location_y: 44.802190,
         },
@@ -346,7 +346,7 @@ APC
 Адрес: 10 I.Abashidze 
 Инстаграм: https://www.instagram.com/apc.georgia/
 Google maps: https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
-            photo: String::from("src/resources/apc.png"),
+            photo: String::from("src/resources/apc.jpg"),
             location_x: 41.706840,
             location_y: 44.772267,
         },
@@ -358,7 +358,7 @@ Sablée
 Адрес: Kekelidze street 1
 Фейсбук: https://www.facebook.com/sableebakery/
 Google maps: https://goo.gl/maps/SqyQqSWqJLPBhq298"),
-            photo: String::from("src/resources/sablee.png"),
+            photo: String::from("src/resources/sablee.jpg"),
             location_x: 41.708389,
             location_y: 44.778489,
         },
@@ -370,7 +370,7 @@ Groovy roasters
 Адрес: Ninoshvili 17
 Инстаграм: https://www.instagram.com/groovyroasters/
 Google maps: https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
-            photo: String::from("src/resources/groovy_roasters.png"),
+            photo: String::from("src/resources/groovy_roasters.jpg"),
             location_x: 41.711521,
             location_y: 44.801714,
         },

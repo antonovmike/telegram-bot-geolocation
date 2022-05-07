@@ -34,8 +34,6 @@ fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, St
         temporary_collection.push((calculated_distance, kofe_list()[index].description.clone(), kofe_list()[index].photo.clone() ));
     }
     temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
-    //let three = format!("{}\n{}\n{}\n{}\n{}\n{}", temporary_collection[0].1, temporary_collection[0].2, temporary_collection[1].1, temporary_collection[1].2, temporary_collection[2].1, temporary_collection[2].2);
-    //three
     let one = format!("{}\n", temporary_collection[0].1);
     let two = format!("{}\n", temporary_collection[1].1);
     let three = format!("{}\n", temporary_collection[2].1);
