@@ -68,8 +68,8 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 		).await?;
 // BUTTON
 		let callback_data = CallbackData::new("hello!");
-        let method = SendMessage::new(chat_id, "how to delete this crap?").reply_markup(vec![vec![
-            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON", &callback_data).unwrap(),
+        let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
+            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №1", &callback_data).unwrap(),
         ]]);
         api.execute(method).await?;
 // 2nd Cafe
@@ -81,8 +81,8 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 		).await?;
 // BUTTON
 		let callback_data = CallbackData::new("hello!");
-        let method = SendMessage::new(chat_id, "how to delete this crap?").reply_markup(vec![vec![
-            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON", &callback_data).unwrap(),
+        let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
+            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №2", &callback_data).unwrap(),
         ]]);
         api.execute(method).await?;
 // 3rd Cafe
@@ -94,8 +94,8 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 		).await?;
 // BUTTON
 		let callback_data = CallbackData::new("hello!");
-        let method = SendMessage::new(chat_id, "how to delete this crap?").reply_markup(vec![vec![
-            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON", &callback_data).unwrap(),
+        let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
+            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №3", &callback_data).unwrap(),
         ]]);
         api.execute(method).await?;
     // dbg!("F");
