@@ -2,7 +2,7 @@
 
 use geo::prelude::*;
 use geo::point;
-use carapax::types::{Message, MessageData, InputFile};
+use carapax::types::{Message, MessageData, InputFile, InlineKeyboardButton};
 use carapax::methods::SendPhoto;
 use carapax::{
     longpoll::LongPoll,
@@ -18,7 +18,20 @@ use std::path::Path;
 use crate::catalog::CoffeeHouse;
 use crate::catalog::kofe_list;
 
+use serde::{Deserialize, Serialize};
+
 mod catalog;
+
+#[derive(Deserialize, Serialize)]
+struct CallbackData {
+    value: String,
+}
+
+impl CallbackData {
+    fn new<S: Into<String>>(value: S) -> Self {
+        Self { value: value.into() }
+    }
+}
 
 fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, String, String) {
     // dbg!(&lat_user);
@@ -52,7 +65,13 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 				chat_id.clone(),
 				InputFile::path(calculated_distance.1).await.unwrap()
 			).caption(calculated_distance.0)
-		).await?;		
+		).await?;
+// BUTTON
+		let callback_data = CallbackData::new("hello!");
+        let method = SendMessage::new(chat_id, "how to delete this crap?").reply_markup(vec![vec![
+            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON", &callback_data).unwrap(),
+        ]]);
+        api.execute(method).await?;
 // 2nd Cafe
 		api.execute(
 			SendPhoto::new(
@@ -60,6 +79,12 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 				InputFile::path(calculated_distance.3).await.unwrap()
 			).caption(calculated_distance.2)
 		).await?;
+// BUTTON
+		let callback_data = CallbackData::new("hello!");
+        let method = SendMessage::new(chat_id, "how to delete this crap?").reply_markup(vec![vec![
+            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON", &callback_data).unwrap(),
+        ]]);
+        api.execute(method).await?;
 // 3rd Cafe
 		api.execute(
 			SendPhoto::new(
@@ -67,8 +92,14 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 				InputFile::path(calculated_distance.5).await.unwrap()
 			).caption(calculated_distance.4)
 		).await?;
-    };
+// BUTTON
+		let callback_data = CallbackData::new("hello!");
+        let method = SendMessage::new(chat_id, "how to delete this crap?").reply_markup(vec![vec![
+            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON", &callback_data).unwrap(),
+        ]]);
+        api.execute(method).await?;
     // dbg!("F");
+    };
     Ok(())
 }
 

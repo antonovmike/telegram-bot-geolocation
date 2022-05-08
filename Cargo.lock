@@ -483,6 +483,7 @@ dependencies = [
  "dotenv",
  "env_logger",
  "geo",
+ "serde",
  "tokio",
 ]
 
