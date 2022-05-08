@@ -7,11 +7,11 @@ pub struct CoffeeHouse {
     pub location_y: f32,
 }
 
-impl fmt::Display for CoffeeHouse {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{} {}", self.description, self.photo)
-    }
-}
+//impl fmt::Display for CoffeeHouse {
+    //fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        //write!(f, "{} {}", self.description, self.photo)
+    //}
+//}
 
 pub fn kofe_list() -> [CoffeeHouse; 30] {
         let kmk: [CoffeeHouse; 30] = [CoffeeHouse {

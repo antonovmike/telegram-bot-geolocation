@@ -47,35 +47,26 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         let lat = location.latitude;
         let calculated_distance = distance(lon, lat);
 // 1st Cafe
-        let method = SendMessage::new(chat_id.clone(), calculated_distance.0);
-        api.execute(method).await?;
-		let method = SendPhoto::new(
-			chat_id.clone(),
-			InputFile::path(calculated_distance.1)
-				.await
-				.unwrap(),
-		);
-		api.execute(method).await?;
+		api.execute(
+			SendPhoto::new(
+				chat_id.clone(),
+				InputFile::path(calculated_distance.1).await.unwrap()
+			).caption(calculated_distance.0)
+		).await?;		
 // 2nd Cafe
-		let method = SendMessage::new(chat_id.clone(), calculated_distance.2);
-        api.execute(method).await?;
-        let method = SendPhoto::new(
-			chat_id.clone(),
-			InputFile::path(calculated_distance.3)
-				.await
-				.unwrap(),
-		);
-		api.execute(method).await?;
+		api.execute(
+			SendPhoto::new(
+				chat_id.clone(),
+				InputFile::path(calculated_distance.3).await.unwrap()
+			).caption(calculated_distance.2)
+		).await?;
 // 3rd Cafe
-		let method = SendMessage::new(chat_id.clone(), calculated_distance.4);
-        api.execute(method).await?;
-        let method = SendPhoto::new(
-			chat_id.clone(),
-			InputFile::path(calculated_distance.5)
-				.await
-				.unwrap(),
-		);
-		api.execute(method).await?;
+		api.execute(
+			SendPhoto::new(
+				chat_id.clone(),
+				InputFile::path(calculated_distance.5).await.unwrap()
+			).caption(calculated_distance.4)
+		).await?;
     };
     // dbg!("F");
     Ok(())
