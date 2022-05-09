@@ -13,9 +13,6 @@ use carapax::{
 use dotenv::dotenv;
 use std::env;
 
-use std::path::Path;
-
-use crate::catalog::CoffeeHouse;
 use crate::catalog::kofe_list;
 
 use serde::{Deserialize, Serialize};
@@ -35,22 +32,18 @@ impl CallbackData {
 
 //pub struct InlineKeyboardButton { /* fields omitted */ }
 
-impl InlineKeyboardButton {
-/// Creates a new InlineKeyboardButton
-/// * text - Text of the button
-/// * kind - Data for the button
-    pub fn new<S: Into<String>>(text: S, kind: InlineKeyboardButtonKind) -> Self {
-        Self {
-            text: text.into(),
-            kind: InlineKeyboardButtonKind::from(kind),
-        }
-    }
+//impl InlineKeyboardButton {
+    //pub fn new<S: Into<String>>(text: S, kind: InlineKeyboardButtonKind) -> Self {
+        //Self {
+            //text: text.into(), // Text of the button
+            //kind: InlineKeyboardButtonKind::from(kind), // Data for the button
+        //}
+    //}
 
-/// HTTP or tg:// url to be opened when button is pressed
-    pub fn with_url<T: Into<String>, D: Into<String>>(text: T, url: D) -> Self {
-        Self::new(text, InlineKeyboardButtonKind::Url(url.into()))
-    }
-}
+    //pub fn with_url<T: Into<String>, D: Into<String>>(text: T, url: D) -> Self {
+        //Self::new(text, InlineKeyboardButtonKind::Url(url.into()))
+    //}
+//}
     
 fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, String, String) {
     // dbg!(&lat_user);
@@ -86,7 +79,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 			).caption(calculated_distance.0)
 		).await?;
 // BUTTON №1
-		let callback_data = CallbackData::new("hello!");
+		let callback_data = CallbackData::new("USELESS");
         let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
             InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №1", &callback_data).unwrap(),
         ]]);
@@ -99,7 +92,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 			).caption(calculated_distance.2)
 		).await?;
 // BUTTON №2
-		let callback_data = CallbackData::new("hello!");
+		let callback_data = CallbackData::new("USELESS");
         let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
             InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №2", &callback_data).unwrap(),
         ]]);
@@ -112,7 +105,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 			).caption(calculated_distance.4)
 		).await?;
 // BUTTON №3
-		let callback_data = CallbackData::new("hello!");
+		let callback_data = CallbackData::new("USELESS");
         let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
             InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №3", &callback_data).unwrap(),
         ]]);
