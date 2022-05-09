@@ -2,7 +2,7 @@
 
 use geo::prelude::*;
 use geo::point;
-use carapax::types::{Message, MessageData, InputFile, InlineKeyboardButton};
+use carapax::types::{Message, MessageData, InputFile, InlineKeyboardButton, InlineKeyboardButtonKind};
 use carapax::methods::SendPhoto;
 use carapax::{
     longpoll::LongPoll,
@@ -33,21 +33,20 @@ impl CallbackData {
     }
 }
 
-pub struct InlineKeyboardButton { /* fields omitted */ }
+//pub struct InlineKeyboardButton { /* fields omitted */ }
 
 impl InlineKeyboardButton {
-    /// Creates a new InlineKeyboardButton
-    /// # Arguments
-    /// * text - Text of the button
-    /// * kind - Data for the button
+/// Creates a new InlineKeyboardButton
+/// * text - Text of the button
+/// * kind - Data for the button
     pub fn new<S: Into<String>>(text: S, kind: InlineKeyboardButtonKind) -> Self {
         Self {
             text: text.into(),
-            kind: InlineKeyboardButtonKindRaw::from(kind),
+            kind: InlineKeyboardButtonKind::from(kind),
         }
     }
 
-    /// HTTP or tg:// url to be opened when button is pressed
+/// HTTP or tg:// url to be opened when button is pressed
     pub fn with_url<T: Into<String>, D: Into<String>>(text: T, url: D) -> Self {
         Self::new(text, InlineKeyboardButtonKind::Url(url.into()))
     }
