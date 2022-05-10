@@ -3,15 +3,10 @@
 pub struct CoffeeHouse {
     pub description: String,
     pub photo: String,
+    pub google_maps: String,
     pub location_x: f32,
     pub location_y: f32,
 }
-
-//impl fmt::Display for CoffeeHouse {
-    //fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        //write!(f, "{} {}", self.description, self.photo)
-    //}
-//}
 
 pub fn kofe_list() -> [CoffeeHouse; 30] {
         let kmk: [CoffeeHouse; 30] = [CoffeeHouse {
@@ -23,6 +18,7 @@ Stamba cafe
 Инстаграм: https://www.instagram.com/cafe.stamba
 Google maps: https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
             photo: String::from("src/resources/stamba_cafe.jpg"),
+            google_maps: String::from("https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
             location_x: 41.705732,
             location_y: 44.787975,
         },
@@ -35,6 +31,7 @@ Google maps: https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
 Инстаграм: https://www.instagram.com/gardeniashevardnadze
 Google maps: https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
             photo: String::from("src/resources/gardeniya_shevarnadze.jpg"),
+            google_maps: String::from("https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
             location_x: 41.731023,
             location_y: 44.830517,
         },
@@ -45,8 +42,9 @@ Google maps: https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
 Режим работы c 11-12, Milk будням открывается с 9
 Адрес: Ninoshvili str.8
 Инстаграм: http://instagram.com/fabrika_tbilisi
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/fabrika.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.709530,
             location_y: 44.802610,
         },
@@ -57,8 +55,9 @@ Erti Kava
 Режим работы c 8:00 до 21:00
 Адрес: Mitropan Laghidze St, 8
 Инстаграм: http://instagram.com/ertikava_coffeeroom
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/erti_kava.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.698988,
             location_y: 44.795367,
         },
@@ -69,8 +68,9 @@ Stories
 Режим работы c 9:00 до 20:00 (в выходные с 10)
 Адрес: 9 Galaktion Tabidze St
 Инстаграм: https://www.instagram.com/stories.tbilisi/?hl=en
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/stories.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.691689,
             location_y: 44.801089,
         },
@@ -81,8 +81,9 @@ Coffee Lab
 Режим работы c 9:00 до 22:00
 Адрес: 27 Alexander Kazbegi Ave
 Инстаграм: https://www.instagram.com/coffeelabgeorgia/?hl=en
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/coffee_lab.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.725648,
             location_y: 44.754978,
         },
@@ -95,6 +96,7 @@ Luicoffee
 Инстаграм: https://www.instagram.com/luicoffee
 Google maps: https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
             photo: String::from("src/resources/luicoffee.jpg"),
+            google_maps: String::from("https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
             location_x: 41.709292,
             location_y: 44.768015,
         },
@@ -105,8 +107,9 @@ Kikliko переводится как «кукареку». Это традиц�
 Режим работы с 8 до 15 (в выходные с 9 до 16)
 Адрес: 28 Mtskheta St
 Инстаграм: https://www.instagram.com/kikliko_
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/kikliko.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.705725,
             location_y: 44.769619,
         },
@@ -117,8 +120,9 @@ Lolita
 Режим работы с 11:00 до 2:00
 Адрес: 7 Tamar Chovelidze St
 Инстаграм: https://www.instagram.com/lolita.tbilisi
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/lolita.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.705671,
             location_y: 44.786925,
         },
@@ -129,8 +133,9 @@ Maria Magdalena
 Режим работы с 11:00 до 23:00
 Адрес: 5 Mikheil Zandukeli Dead End
 Инстаграм: https://www.instagram.com/mariamagdalina.tbilisi
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/maria_magdalena.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.704922,
             location_y: 44.788100,
         },
@@ -141,8 +146,9 @@ Kikodze
 Режим работы с 9:00 до 1:00
 Адрес: 1 Vasil Petriashvili Street
 Инстаграм: https://www.instagram.com/kikodzebar
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/kikodze.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.708215,
             location_y: 44.788091,
         },
@@ -153,8 +159,9 @@ Shavi Coffee
 Режим работы с 8:00 до 21:00
 Адрес: 40 Zandukeli Street
 Инстаграм: https://www.instagram.com/shavi.coffee
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/shavi_coffee.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.704129,
             location_y: 44.784089,
         },
@@ -165,8 +172,9 @@ PULP
 Режим работы: Пн-Чт 9:30-19, Пт 9:30-20, Сб 10-20, Вс 10-18
 Адрес: 22 Simon Janashia
 Инстаграм: https://www.instagram.com/pulp.tbilisi/?hl=en
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/pulp.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.705987,
             location_y: 44.781482,
         },
@@ -177,8 +185,9 @@ They said books
 Режим работы с 12 до 21
 Адрес: 10 Giorgi Akhvlediani St
 Инстаграм: https://www.instagram.com/theysaidbooks.coffeeshop
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/they_said_books.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.705315,
             location_y: 44.789875,
         },
@@ -191,6 +200,7 @@ Daily grind
 Инстаграм: https://www.instagram.com/dailygrindtbilisi
 Google maps: https://goo.gl/maps/X4DbGjH63gpp91m19"),
             photo: String::from("src/resources/daily_grind.jpg"),
+            google_maps: String::from("https://goo.gl/maps/X4DbGjH63gpp91m19"),
             location_x: 41.693138,
             location_y: 44.802658,
         },
@@ -201,8 +211,9 @@ Black Cup x Valiko Bar
 Режим работы с 18 до 23:00
 Адрес: 24 Galaktion Tabidze Street
 Инстаграм: https://www.instagram.com/valiko.mansion
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/black_cup_x_valiko_bar.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.689804,
             location_y: 44.801400,
         },
@@ -215,6 +226,7 @@ Eleven.window
 Инстаграм: https://www.instagram.com/eleven.window
 Google maps: https://goo.gl/maps/pxGFnwdBR1SbbKmX6"),
             photo: String::from("src/resources/eleven_window.jpg"),
+            google_maps: String::from("https://goo.gl/maps/pxGFnwdBR1SbbKmX6"),
             location_x: 41.695242,
             location_y: 44.793238,
         },
@@ -225,8 +237,9 @@ Nur
 Режим работы в будни с 10:00 - 19:00 (выходные 11:00 - 18:00)
 Адрес: Lado Kavsadze 7
 Инстаграм: https://www.instagram.com/nur_coffeeshop
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/nur.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.708684,
             location_y: 44.761402,
         },
@@ -239,6 +252,7 @@ Lamarzocco
 Инстаграм: https://www.instagram.com/lamarzoccoespressobar
 Google maps: https://goo.gl/maps/oRNzGXPBcths3eDL6"),
             photo: String::from("src/resources/lamarzocco.jpg"),
+            google_maps: String::from("https://goo.gl/maps/oRNzGXPBcths3eDL6"),
             location_x: 41.710275,
             location_y: 44.766336,
         },
@@ -249,8 +263,9 @@ Jupiter
 Режим работы с 8:00 до 23:00
 Адрес: Ivane Machabeli 4
 Инстаграм: https://www.instagram.com/jupiter.tbilisi
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/jupiter.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.692065,
             location_y: 44.799947,
         },
@@ -261,8 +276,9 @@ Sol • სოლ
 Режим работы с 8:00 до 22:00
 Адрес: 28 Vasil Petriashvili Street
 Инстаграм: https://www.instagram.com/sol.tbilisi/?hl=ru
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/sol.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.705638,
             location_y: 44.779638,
         },
@@ -273,8 +289,9 @@ Mondo Coffee
 Режим работы с 9:00 до 20:00
 Адрес: 13 a Ivane Tarkhnishvili St
 Инстаграм: https://www.instagram.com/mondogeorgia
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/mondo_coffee.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.706474,
             location_y: 44.783221,
         },
@@ -285,8 +302,9 @@ Shukura
 Режим работы с 8:00 до 23:00
 Адрес: 49 Irakli Abashidze Street
 Инстаграм: https://www.instagram.com/shukura.coffee/?hl=ru
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/shukura.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.708367,
             location_y: 44.760192,
         },
@@ -297,8 +315,9 @@ Erti Kava
 Режим работы с 8:00 до 21:00
 Адрес: 81 Irakli Abashidze Street
 Инстаграм: http://instagram.com/ertikava_coffeeroom/?hl=en
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/erti_kava.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.708954,
             location_y: 44.755021,
         },
@@ -309,8 +328,9 @@ Books from past
 Режим работы с 12:00 до 20:00
 Адрес: 10 Giorgi Akhvlediani St, flat 2
 Инстаграм: https://www.instagram.com/booksfrompast.shop
-Google maps: "),
+Google maps: ДОБАВИТЬ ССЫЛКУ НА КАРТУ"),
             photo: String::from("src/resources/books_from_past.jpg"),
+            google_maps: String::from("https://duckduckgo.com/"),
             location_x: 41.705389,
             location_y: 44.789874,
         },
@@ -323,6 +343,7 @@ Depo
 Инстаграм: https://www.instagram.com/depo.tbilisi/
 Google maps: https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
             photo: String::from("src/resources/depo.jpg"),
+            google_maps: String::from("https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
             location_x: 41.708348,
             location_y: 44.784006,
         },
@@ -335,6 +356,7 @@ ComUNITY of specialty coffee admirers — указано в инстаграме
 Инстаграм: https://www.instagram.com/unity_kava/
 Google maps: https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
             photo: String::from("src/resources/unity_kava.jpg"),
+            google_maps: String::from("https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
             location_x: 41.691128,
             location_y: 44.802190,
         },
@@ -347,6 +369,7 @@ APC
 Инстаграм: https://www.instagram.com/apc.georgia/
 Google maps: https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
             photo: String::from("src/resources/apc.jpg"),
+            google_maps: String::from("https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
             location_x: 41.706840,
             location_y: 44.772267,
         },
@@ -359,6 +382,7 @@ Sablée
 Фейсбук: https://www.facebook.com/sableebakery/
 Google maps: https://goo.gl/maps/SqyQqSWqJLPBhq298"),
             photo: String::from("src/resources/sablee.jpg"),
+            google_maps: String::from("https://goo.gl/maps/SqyQqSWqJLPBhq298"),
             location_x: 41.708389,
             location_y: 44.778489,
         },
@@ -371,6 +395,7 @@ Groovy roasters
 Инстаграм: https://www.instagram.com/groovyroasters/
 Google maps: https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
             photo: String::from("src/resources/groovy_roasters.jpg"),
+            google_maps: String::from("https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
             location_x: 41.711521,
             location_y: 44.801714,
         },
