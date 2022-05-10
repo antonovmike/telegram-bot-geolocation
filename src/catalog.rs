@@ -27,7 +27,7 @@ Stamba cafe
             location_x: 41.705732,
             location_y: 44.787975,
             caffee_name: String::from("Stamba cafe"),
-            address: String::from("11111111"),
+            address: String::from("Merab Kostava St. 14"),
         },
         CoffeeHouse {
             description: String::from("
@@ -43,7 +43,7 @@ Stamba cafe
             location_x: 41.731023,
             location_y: 44.830517,
             caffee_name: String::from("Гардения Шеварнадзе"),
-            address: String::from("11111111"),
+            address: String::from("Khudadovi, 38"),
         },
         CoffeeHouse {
             description: String::from("
@@ -59,7 +59,7 @@ Stamba cafe
             location_x: 41.709530,
             location_y: 44.802610,
             caffee_name: String::from("Фабрика"),
-            address: String::from("11111111"),
+            address: String::from("Ninoshvili str.8"),
         },
         CoffeeHouse {
             description: String::from("
@@ -75,7 +75,7 @@ Erti Kava
             location_x: 41.698988,
             location_y: 44.795367,
             caffee_name: String::from("Erti Kava"),
-            address: String::from("11111111"),
+            address: String::from("Mitropan Laghidze St, 8"),
         },
         CoffeeHouse {
             description: String::from("
@@ -91,7 +91,7 @@ Stories
             location_x: 41.691689,
             location_y: 44.801089,
             caffee_name: String::from("Stories"),
-            address: String::from("11111111"),
+            address: String::from("9 Galaktion Tabidze St"),
         },
         CoffeeHouse {
             description: String::from("
@@ -107,7 +107,7 @@ Coffee Lab
             location_x: 41.725648,
             location_y: 44.754978,
             caffee_name: String::from("Coffee Lab"),
-            address: String::from("11111111"),
+            address: String::from("27 Alexander Kazbegi Ave"),
         },
         CoffeeHouse {
             description: String::from("
@@ -124,7 +124,7 @@ Google maps: https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
             location_x: 41.709292,
             location_y: 44.768015,
             caffee_name: String::from("Luicoffee"),
-            address: String::from("11111111"),
+            address: String::from("23-23a Chavchavadze Ave"),
         },
         CoffeeHouse {
             description: String::from("
@@ -140,7 +140,7 @@ Kikliko переводится как «кукареку». Это традиц�
             location_x: 41.705725,
             location_y: 44.769619,
             caffee_name: String::from("Kikliko"),
-            address: String::from("11111111"),
+            address: String::from("28 Mtskheta St"),
         },
         CoffeeHouse {
             description: String::from("
@@ -156,7 +156,7 @@ Lolita
             location_x: 41.705671,
             location_y: 44.786925,
             caffee_name: String::from("Lolita"),
-            address: String::from("11111111"),
+            address: String::from("7 Tamar Chovelidze St"),
         },
         CoffeeHouse {
             description: String::from("
@@ -172,7 +172,7 @@ Maria Magdalena
             location_x: 41.704922,
             location_y: 44.788100,
             caffee_name: String::from("Maria Magdalena"),
-            address: String::from("11111111"),
+            address: String::from("5 Mikheil Zandukeli Dead End"),
         },
         CoffeeHouse {
             description: String::from("
@@ -188,7 +188,7 @@ Kikodze
             location_x: 41.708215,
             location_y: 44.788091,
             caffee_name: String::from("Kikodze"),
-            address: String::from("11111111"),
+            address: String::from("1 Vasil Petriashvili Street"),
         },
         CoffeeHouse {
             description: String::from("
@@ -204,7 +204,7 @@ Shavi Coffee
             location_x: 41.704129,
             location_y: 44.784089,
             caffee_name: String::from("Shavi Coffee"),
-            address: String::from("11111111"),
+            address: String::from("40 Zandukeli Street"),
         },
         CoffeeHouse {
             description: String::from("
@@ -220,7 +220,7 @@ PULP
             location_x: 41.705987,
             location_y: 44.781482,
             caffee_name: String::from("PULP"),
-            address: String::from("11111111"),
+            address: String::from("22 Simon Janashia"),
         },
         CoffeeHouse {
             description: String::from("
@@ -236,7 +236,7 @@ They said books
             location_x: 41.705315,
             location_y: 44.789875,
             caffee_name: String::from("They said books"),
-            address: String::from("11111111"),
+            address: String::from("10 Giorgi Akhvlediani St"),
         },
         CoffeeHouse {
             description: String::from("
@@ -253,7 +253,7 @@ Google maps: https://goo.gl/maps/X4DbGjH63gpp91m19"),
             location_x: 41.693138,
             location_y: 44.802658,
             caffee_name: String::from("Daily grind"),
-            address: String::from("11111111"),
+            address: String::from("4 Kote Afkhazi St"),
         },
         CoffeeHouse {
             description: String::from("
@@ -269,7 +269,7 @@ Black Cup x Valiko Bar
             location_x: 41.689804,
             location_y: 44.801400,
             caffee_name: String::from("Black Cup x Valiko Bar"),
-            address: String::from("11111111"),
+            address: String::from("24 Galaktion Tabidze Street"),
         },
         CoffeeHouse {
             description: String::from("
@@ -286,7 +286,7 @@ Google maps: https://goo.gl/maps/pxGFnwdBR1SbbKmX6"),
             location_x: 41.695242,
             location_y: 44.793238,
             caffee_name: String::from("Eleven.window"),
-            address: String::from("11111111"),
+            address: String::from("6 Niaghvari St"),
         },
         CoffeeHouse {
             description: String::from("
@@ -302,7 +302,7 @@ Nur
             location_x: 41.708684,
             location_y: 44.761402,
             caffee_name: String::from("Nur"),
-            address: String::from("11111111"),
+            address: String::from("Lado Kavsadze 7"),
         },
         CoffeeHouse {
             description: String::from("
@@ -319,7 +319,7 @@ Google maps: https://goo.gl/maps/oRNzGXPBcths3eDL6"),
             location_x: 41.710275,
             location_y: 44.766336,
             caffee_name: String::from("Lamarzocco"),
-            address: String::from("11111111"),
+            address: String::from("Ilia Chavchavadze 27"),
         },
         CoffeeHouse {
             description: String::from("
@@ -335,7 +335,7 @@ Jupiter
             location_x: 41.692065,
             location_y: 44.799947,
             caffee_name: String::from("Jupiter"),
-            address: String::from("11111111"),
+            address: String::from("Ivane Machabeli 4"),
         },
         CoffeeHouse {
             description: String::from("
@@ -351,7 +351,7 @@ Sol • სოლ
             location_x: 41.705638,
             location_y: 44.779638,
             caffee_name: String::from("Sol • სოლ"),
-            address: String::from("11111111"),
+            address: String::from("28 Vasil Petriashvili Street"),
         },
         CoffeeHouse {
             description: String::from("
@@ -367,7 +367,7 @@ Mondo Coffee
             location_x: 41.706474,
             location_y: 44.783221,
             caffee_name: String::from("Mondo Coffee"),
-            address: String::from("11111111"),
+            address: String::from("13 a Ivane Tarkhnishvili St"),
         },
         CoffeeHouse {
             description: String::from("
@@ -383,7 +383,7 @@ Shukura
             location_x: 41.708367,
             location_y: 44.760192,
             caffee_name: String::from("Shukura"),
-            address: String::from("11111111"),
+            address: String::from("49 Irakli Abashidze Street"),
         },
         CoffeeHouse {
             description: String::from("
@@ -399,7 +399,7 @@ Erti Kava
             location_x: 41.708954,
             location_y: 44.755021,
             caffee_name: String::from("Erti Kava"),
-            address: String::from("11111111"),
+            address: String::from("81 Irakli Abashidze Street"),
         },
         CoffeeHouse {
             description: String::from("
@@ -415,7 +415,7 @@ Books from past
             location_x: 41.705389,
             location_y: 44.789874,
             caffee_name: String::from("Books from past"),
-            address: String::from("11111111"),
+            address: String::from("10 Giorgi Akhvlediani St, flat 2"),
         },
         CoffeeHouse {
             description: String::from("
@@ -430,7 +430,7 @@ Google maps: https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
             location_x: 41.708348,
             location_y: 44.784006,
             caffee_name: String::from("Depo"),
-            address: String::from("11111111"),
+            address: String::from("Shalva Ghambashldze, 10"),
         },
         CoffeeHouse {
             description: String::from("
@@ -447,7 +447,7 @@ Google maps: https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
             location_x: 41.691128,
             location_y: 44.802190,
             caffee_name: String::from("Unity kava"),
-            address: String::from("11111111"),
+            address: String::from("Shalva Dadiani, 20"),
         },
         CoffeeHouse {
             description: String::from("
@@ -464,7 +464,7 @@ Google maps: https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
             location_x: 41.706840,
             location_y: 44.772267,
             caffee_name: String::from("APC"),
-            address: String::from("11111111"),
+            address: String::from("10 I.Abashidze"),
         },
         CoffeeHouse {
             description: String::from("
@@ -481,7 +481,7 @@ Google maps: https://goo.gl/maps/SqyQqSWqJLPBhq298"),
             location_x: 41.708389,
             location_y: 44.778489,
             caffee_name: String::from("Sablée"),
-            address: String::from("11111111"),
+            address: String::from("Kekelidze street 1"),
         },
         CoffeeHouse {
             description: String::from("
@@ -498,7 +498,7 @@ Google maps: https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
             location_x: 41.711521,
             location_y: 44.801714,
             caffee_name: String::from("Groovy roasters"),
-            address: String::from("11111111"),
+            address: String::from("Ninoshvili 17"),
         },
     ];
     kmk
