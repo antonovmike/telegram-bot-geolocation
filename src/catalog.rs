@@ -1,4 +1,5 @@
 //use std::fmt;
+//use colored::Colorize;
 
 pub struct CoffeeHouse {
     pub description: String,
@@ -6,6 +7,8 @@ pub struct CoffeeHouse {
     pub google_maps: String,
     pub location_x: f32,
     pub location_y: f32,
+    pub caffee_name: String,
+    pub address: String,
 }
 
 pub fn kofe_list() -> [CoffeeHouse; 30] {
@@ -23,6 +26,8 @@ Stamba cafe
             google_maps: String::from("https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
             location_x: 41.705732,
             location_y: 44.787975,
+            caffee_name: String::from("Stamba cafe"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -37,6 +42,8 @@ Stamba cafe
             google_maps: String::from("https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
             location_x: 41.731023,
             location_y: 44.830517,
+            caffee_name: String::from("Гардения Шеварнадзе"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -51,6 +58,8 @@ Stamba cafe
             google_maps: String::from("https://g.page/FabrikaTbilisi?share"),
             location_x: 41.709530,
             location_y: 44.802610,
+            caffee_name: String::from("Фабрика"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -65,6 +74,8 @@ Erti Kava
             google_maps: String::from("https://goo.gl/maps/k5BpnCZsRBkwENsD8"),
             location_x: 41.698988,
             location_y: 44.795367,
+            caffee_name: String::from("Erti Kava"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -79,6 +90,8 @@ Stories
             google_maps: String::from("https://goo.gl/maps/TZQM5TZWkEwQ37HK8"),
             location_x: 41.691689,
             location_y: 44.801089,
+            caffee_name: String::from("Stories"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -93,6 +106,8 @@ Coffee Lab
             google_maps: String::from("https://goo.gl/maps/2daWAVhDAbjVUpxVA"),
             location_x: 41.725648,
             location_y: 44.754978,
+            caffee_name: String::from("Coffee Lab"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -108,6 +123,8 @@ Google maps: https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
             google_maps: String::from("https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
             location_x: 41.709292,
             location_y: 44.768015,
+            caffee_name: String::from("Luicoffee"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -122,6 +139,8 @@ Kikliko переводится как «кукареку». Это традиц�
             google_maps: String::from("https://g.page/Kikliko?share"),
             location_x: 41.705725,
             location_y: 44.769619,
+            caffee_name: String::from("Kikliko"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -136,6 +155,8 @@ Lolita
             google_maps: String::from("https://goo.gl/maps/QiATrYmw8xHcVaT59"),
             location_x: 41.705671,
             location_y: 44.786925,
+            caffee_name: String::from("Lolita"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -150,6 +171,8 @@ Maria Magdalena
             google_maps: String::from("https://goo.gl/maps/DdRrKJpU12Q3yB7R9"),
             location_x: 41.704922,
             location_y: 44.788100,
+            caffee_name: String::from("Maria Magdalena"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -164,6 +187,8 @@ Kikodze
             google_maps: String::from("https://goo.gl/maps/vWikLD4v2fL8ZpV97"),
             location_x: 41.708215,
             location_y: 44.788091,
+            caffee_name: String::from("Kikodze"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -178,6 +203,8 @@ Shavi Coffee
             google_maps: String::from("https://goo.gl/maps/UaKHDeA3zXddsv7ZA"),
             location_x: 41.704129,
             location_y: 44.784089,
+            caffee_name: String::from("Shavi Coffee"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -192,6 +219,8 @@ PULP
             google_maps: String::from("https://goo.gl/maps/LNZq645yt9CwP7WdA"),
             location_x: 41.705987,
             location_y: 44.781482,
+            caffee_name: String::from("PULP"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -206,6 +235,8 @@ They said books
             google_maps: String::from("https://goo.gl/maps/EkA2guZ6e5L9bZpq6"),
             location_x: 41.705315,
             location_y: 44.789875,
+            caffee_name: String::from("They said books"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -221,6 +252,8 @@ Google maps: https://goo.gl/maps/X4DbGjH63gpp91m19"),
             google_maps: String::from("https://goo.gl/maps/X4DbGjH63gpp91m19"),
             location_x: 41.693138,
             location_y: 44.802658,
+            caffee_name: String::from("Daily grind"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -235,6 +268,8 @@ Black Cup x Valiko Bar
             google_maps: String::from("https://goo.gl/maps/hx7Wvg9fSSQrwkfWA"),
             location_x: 41.689804,
             location_y: 44.801400,
+            caffee_name: String::from("Black Cup x Valiko Bar"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -250,6 +285,8 @@ Google maps: https://goo.gl/maps/pxGFnwdBR1SbbKmX6"),
             google_maps: String::from("https://goo.gl/maps/pxGFnwdBR1SbbKmX6"),
             location_x: 41.695242,
             location_y: 44.793238,
+            caffee_name: String::from("Eleven.window"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -264,6 +301,8 @@ Nur
             google_maps: String::from("https://g.page/small-local-coffee-shop?share"),
             location_x: 41.708684,
             location_y: 44.761402,
+            caffee_name: String::from("Nur"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -279,6 +318,8 @@ Google maps: https://goo.gl/maps/oRNzGXPBcths3eDL6"),
             google_maps: String::from("https://goo.gl/maps/oRNzGXPBcths3eDL6"),
             location_x: 41.710275,
             location_y: 44.766336,
+            caffee_name: String::from("Lamarzocco"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -293,6 +334,8 @@ Jupiter
             google_maps: String::from("https://goo.gl/maps/7hf4dxxduD3WupdF7"),
             location_x: 41.692065,
             location_y: 44.799947,
+            caffee_name: String::from("Jupiter"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -307,6 +350,8 @@ Sol • სოლ
             google_maps: String::from("https://goo.gl/maps/d6LB8nybZ3BiRUGr6"),
             location_x: 41.705638,
             location_y: 44.779638,
+            caffee_name: String::from("Sol • სოლ"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -321,6 +366,8 @@ Mondo Coffee
             google_maps: String::from("https://goo.gl/maps/xG7dtLGMxHk6NxP36"),
             location_x: 41.706474,
             location_y: 44.783221,
+            caffee_name: String::from("Mondo Coffee"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -335,6 +382,8 @@ Shukura
             google_maps: String::from("https://goo.gl/maps/iBtE5girFjLRjUGr8"),
             location_x: 41.708367,
             location_y: 44.760192,
+            caffee_name: String::from("Shukura"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -349,6 +398,8 @@ Erti Kava
             google_maps: String::from("https://goo.gl/maps/2138Kbu6YRgDfpQx9"),
             location_x: 41.708954,
             location_y: 44.755021,
+            caffee_name: String::from("Erti Kava"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -363,6 +414,8 @@ Books from past
             google_maps: String::from("https://goo.gl/maps/fNmSkXiijs65GNcj8"),
             location_x: 41.705389,
             location_y: 44.789874,
+            caffee_name: String::from("Books from past"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -376,6 +429,8 @@ Google maps: https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
             google_maps: String::from("https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
             location_x: 41.708348,
             location_y: 44.784006,
+            caffee_name: String::from("Depo"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -391,6 +446,8 @@ Google maps: https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
             google_maps: String::from("https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
             location_x: 41.691128,
             location_y: 44.802190,
+            caffee_name: String::from("Unity kava"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -406,6 +463,8 @@ Google maps: https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
             google_maps: String::from("https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
             location_x: 41.706840,
             location_y: 44.772267,
+            caffee_name: String::from("APC"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -421,6 +480,8 @@ Google maps: https://goo.gl/maps/SqyQqSWqJLPBhq298"),
             google_maps: String::from("https://goo.gl/maps/SqyQqSWqJLPBhq298"),
             location_x: 41.708389,
             location_y: 44.778489,
+            caffee_name: String::from("Sablée"),
+            address: String::from("11111111"),
         },
         CoffeeHouse {
             description: String::from("
@@ -436,6 +497,8 @@ Google maps: https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
             google_maps: String::from("https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
             location_x: 41.711521,
             location_y: 44.801714,
+            caffee_name: String::from("Groovy roasters"),
+            address: String::from("11111111"),
         },
     ];
     kmk
