@@ -33,6 +33,17 @@ impl CallbackData {
     }
 }
 
+#[derive(Deserialize, Serialize)]
+struct Url {
+    value: String,
+}
+
+impl Url {
+    fn new<S: Into<String>>(value: S) -> Self {
+        Self { value: "https://duckduckgo.com/".to_string() }
+    }
+}
+
 fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, String, String) {
     // dbg!(&lat_user);
     // dbg!(&lon_user);
