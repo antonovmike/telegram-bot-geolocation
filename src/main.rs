@@ -44,8 +44,12 @@ fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, St
     for index in 0..kofe_list().len() {
         let point_destination = point!(x: kofe_list()[index].location_x, y: kofe_list()[index].location_y);
         let calculated_distance: i32 = point_user.haversine_distance(&point_destination).round() as i32;
-        //temporary_collection.push((calculated_distance, kofe_list()[index].description.clone() ));
-        temporary_collection.push((calculated_distance, kofe_list()[index].description.clone(), kofe_list()[index].photo.clone(), kofe_list()[index].google_maps.clone() ));
+        temporary_collection.push((
+			calculated_distance, 
+			kofe_list()[index].description.clone(), 
+			kofe_list()[index].photo.clone(), 
+			kofe_list()[index].google_maps.clone()
+		));
     }
     temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
     let one = format!("{}\n", temporary_collection[0].1);
@@ -73,13 +77,15 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
             .caption(calculated_distance.0),
         )
         .await?;
-        // BUTTON №1
-        let callback_data = calculated_distance.2;
-        let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
-            InlineKeyboardButton::with_url("Посмотреть на карте", callback_data.to_string()),
+// BUTTON №1
+        //let callback_data = calculated_distance.2;
+        let method = SendMessage::new(chat_id.clone(), "👇👇👇👇👇👇👇👇👇").reply_markup(vec![vec![
+            InlineKeyboardButton::with_url(
+            	"Посмотреть на карте", calculated_distance.2.to_string()
+            ),
         ]]);
         api.execute(method).await?;
-        // 2nd Cafe
+// 2nd Cafe
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
@@ -90,7 +96,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         .await?;
         // BUTTON №2
         let callback_data = calculated_distance.5;
-        let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
+        let method = SendMessage::new(chat_id.clone(), "👇👇👇👇👇👇👇👇👇").reply_markup(vec![vec![
             InlineKeyboardButton::with_url("Посмотреть на карте", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
@@ -103,10 +109,12 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
             .caption(calculated_distance.6),
         )
         .await?;
-        // BUTTON №3
+// BUTTON №3
         let callback_data = calculated_distance.8;
-        let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
-            InlineKeyboardButton::with_url("Посмотреть на карте", callback_data.to_string()),
+        let method = SendMessage::new(chat_id.clone(), "👇👇👇👇👇👇👇👇👇").reply_markup(vec![vec![
+            InlineKeyboardButton::with_url(
+            	"Посмотреть на карте", callback_data.to_string()
+            ),
         ]]);
         api.execute(method).await?;
         // dbg!("F");
