@@ -34,7 +34,12 @@ impl CallbackData {
     }
 }
 
-fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, String, String, String, String, String) {
+fn distance(lat_user: f32, lon_user: f32) -> (
+String, String, String, 
+String, String, String, 
+String, String, String, 
+String, String, String
+) {
     // dbg!(&lat_user);
     // dbg!(&lon_user);
     let mut temporary_collection = vec![];
@@ -45,19 +50,20 @@ fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, St
         let point_destination = point!(x: kofe_list()[index].location_x, y: kofe_list()[index].location_y);
         let calculated_distance: i32 = point_user.haversine_distance(&point_destination).round() as i32;
         temporary_collection.push((
-			calculated_distance, 
-			kofe_list()[index].description.clone(), 
-			kofe_list()[index].photo.clone(), 
-			kofe_list()[index].google_maps.clone()
+			calculated_distance,                    // 0
+			kofe_list()[index].description.clone(), // 1
+			kofe_list()[index].photo.clone(),       // 2
+			kofe_list()[index].google_maps.clone(), // 3
+			kofe_list()[index].address.clone(),     // 4
 		));
     }
     temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
-    let one = format!("{}\n", temporary_collection[0].1);
-    let two = format!("{}\n", temporary_collection[1].1);
+    let one   = format!("{}\n", temporary_collection[0].1);
+    let two   = format!("{}\n", temporary_collection[1].1);
     let three = format!("{}\n", temporary_collection[2].1);
-    (one, temporary_collection[0].2.clone(), temporary_collection[0].3.clone(), 
-    two, temporary_collection[1].2.clone(), temporary_collection[1].3.clone(), 
-    three, temporary_collection[2].2.clone(), temporary_collection[2].3.clone() )
+    (one, temporary_collection[0].2.clone(), temporary_collection[0].3.clone(), temporary_collection[0].4.clone(), 
+    two, temporary_collection[1].2.clone(), temporary_collection[1].3.clone(), temporary_collection[1].4.clone(), 
+    three, temporary_collection[2].2.clone(), temporary_collection[2].3.clone(), temporary_collection[2].4.clone() )
 }
 
 async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), ExecuteError> {
@@ -78,8 +84,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         )
         .await?;
 // BUTTON №1
-        //let callback_data = calculated_distance.2;
-        let method = SendMessage::new(chat_id.clone(), "👇👇👇👇👇👇👇👇👇").reply_markup(vec![vec![
+        let method = SendMessage::new(chat_id.clone(), calculated_distance.3.to_string()).reply_markup(vec![vec![
             InlineKeyboardButton::with_url(
             	"Посмотреть на карте", calculated_distance.2.to_string()
             ),
@@ -89,14 +94,14 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
-                InputFile::path(calculated_distance.4).await.unwrap(),
+                InputFile::path(calculated_distance.5).await.unwrap(),
             )
-            .caption(calculated_distance.3),
+            .caption(calculated_distance.4),
         )
         .await?;
         // BUTTON №2
-        let callback_data = calculated_distance.5;
-        let method = SendMessage::new(chat_id.clone(), "👇👇👇👇👇👇👇👇👇").reply_markup(vec![vec![
+        let callback_data = calculated_distance.6;
+        let method = SendMessage::new(chat_id.clone(), calculated_distance.7.to_string()).reply_markup(vec![vec![
             InlineKeyboardButton::with_url("Посмотреть на карте", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
@@ -104,14 +109,14 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
-                InputFile::path(calculated_distance.7).await.unwrap(),
+                InputFile::path(calculated_distance.9).await.unwrap(),
             )
-            .caption(calculated_distance.6),
+            .caption(calculated_distance.8),
         )
         .await?;
 // BUTTON №3
-        let callback_data = calculated_distance.8;
-        let method = SendMessage::new(chat_id.clone(), "👇👇👇👇👇👇👇👇👇").reply_markup(vec![vec![
+        let callback_data = calculated_distance.10;
+        let method = SendMessage::new(chat_id.clone(), calculated_distance.11.to_string()).reply_markup(vec![vec![
             InlineKeyboardButton::with_url(
             	"Посмотреть на карте", callback_data.to_string()
             ),
@@ -119,10 +124,11 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         api.execute(method).await?;
         // dbg!("F");
     } else {
-	let warning_message = "Добро пожаловать, бла бла, для того, чтобы найти ближайшие кафе, пожалуйста пришлите свою гео-позицию".to_string();
-	let method = SendMessage::new(chat_id.clone(), warning_message);
-    api.execute(method).await?;
-    };
+		let warning_message = "Добро пожаловать, бла бла, для того, чтобы найти ближайшие кафе, пожалуйста пришлите свою гео-позицию".to_string();
+		let method = SendMessage::new(chat_id.clone(), warning_message);
+        api.execute(method).await?;
+//"Добро пожаловать, бла бла, для того, чтобы найти ближайшие кафе, пожалуйста пришлите свою гео-позицию"
+	};
     Ok(())
 }
 
