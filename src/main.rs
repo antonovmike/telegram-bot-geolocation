@@ -38,6 +38,17 @@ impl CallbackData {
     }
 }
 
+#[derive(Deserialize, Serialize)]
+struct Url {
+    value: String,
+}
+
+impl Url {
+    fn new<S: Into<String>>(value: S) -> Self {
+        Self { value: "https://duckduckgo.com/".to_string() }
+    }
+}
+
 fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, String, String) {
     // dbg!(&lat_user);
     // dbg!(&lon_user);
@@ -72,7 +83,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 			).caption(calculated_distance.0)
 		).await?;
 // BUTTON №1
-		let callback_data = CallbackData::new("https://duckduckgo.com/");
+		let callback_data = Url::new("https://duckduckgo.com/");
         let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
             InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №1", &callback_data).unwrap(),
         ]]);
