@@ -22,10 +22,6 @@ use serde::{Deserialize, Serialize};
 
 mod catalog;
 
-pub enum InlineKeyboardButtonKind {
-    Url(String),
-    CallbackData(String),
-}
 
 #[derive(Deserialize, Serialize)]
 struct CallbackData {
@@ -37,19 +33,8 @@ impl CallbackData {
         Self { value: value.into() }
     }
 }
-// URL
-#[derive(Deserialize, Serialize)]
-struct Url {
-    value: String,
-}
 
-impl Url {
-    fn new<S: Into<String>>(value: S) -> Self {
-        Self { value: "https://duckduckgo.com/".to_string() }
-    }
-}
-
-fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, String, String) {
+fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, String, String, String, String, String) {
     // dbg!(&lat_user);
     // dbg!(&lon_user);
     let mut temporary_collection = vec![];
@@ -60,13 +45,15 @@ fn distance(lat_user: f32, lon_user: f32) -> (String, String, String, String, St
         let point_destination = point!(x: kofe_list()[index].location_x, y: kofe_list()[index].location_y);
         let calculated_distance: i32 = point_user.haversine_distance(&point_destination).round() as i32;
         //temporary_collection.push((calculated_distance, kofe_list()[index].description.clone() ));
-        temporary_collection.push((calculated_distance, kofe_list()[index].description.clone(), kofe_list()[index].photo.clone() ));
+        temporary_collection.push((calculated_distance, kofe_list()[index].description.clone(), kofe_list()[index].photo.clone(), kofe_list()[index].google_maps.clone() ));
     }
     temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
     let one = format!("{}\n", temporary_collection[0].1);
     let two = format!("{}\n", temporary_collection[1].1);
     let three = format!("{}\n", temporary_collection[2].1);
-    (one, temporary_collection[0].2.clone(), two, temporary_collection[1].2.clone(), three, temporary_collection[2].2.clone())
+    (one, temporary_collection[0].2.clone(), temporary_collection[0].3.clone(), 
+    two, temporary_collection[1].2.clone(), temporary_collection[1].3.clone(), 
+    three, temporary_collection[2].2.clone(), temporary_collection[2].3.clone() )
 }
 
 async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), ExecuteError> {
@@ -87,7 +74,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         )
         .await?;
         // BUTTON №1
-        let callback_data = "https://duckduckgo.com/";
+        let callback_data = calculated_distance.2;
         let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
             InlineKeyboardButton::with_url("DEMO BUTTON №1", callback_data.to_string()),
         ]]);
@@ -96,12 +83,13 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
-                InputFile::path(calculated_distance.3).await.unwrap(),
+                InputFile::path(calculated_distance.4).await.unwrap(),
             )
-            .caption(calculated_distance.2),
+            .caption(calculated_distance.3),
         )
         .await?;
         // BUTTON №2
+        let callback_data = calculated_distance.5;
         let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
             InlineKeyboardButton::with_url("DEMO BUTTON №2", callback_data.to_string()),
         ]]);
@@ -110,12 +98,13 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
-                InputFile::path(calculated_distance.5).await.unwrap(),
+                InputFile::path(calculated_distance.7).await.unwrap(),
             )
-            .caption(calculated_distance.4),
+            .caption(calculated_distance.6),
         )
         .await?;
         // BUTTON №3
+        let callback_data = calculated_distance.8;
         let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
             InlineKeyboardButton::with_url("DEMO BUTTON №3", callback_data.to_string()),
         ]]);
