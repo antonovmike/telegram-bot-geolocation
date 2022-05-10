@@ -76,7 +76,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         // BUTTON №1
         let callback_data = calculated_distance.2;
         let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
-            InlineKeyboardButton::with_url("DEMO BUTTON №1", callback_data.to_string()),
+            InlineKeyboardButton::with_url("Посмотреть на карте", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
         // 2nd Cafe
@@ -91,7 +91,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         // BUTTON №2
         let callback_data = calculated_distance.5;
         let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
-            InlineKeyboardButton::with_url("DEMO BUTTON №2", callback_data.to_string()),
+            InlineKeyboardButton::with_url("Посмотреть на карте", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
         // 3rd Cafe
@@ -106,7 +106,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         // BUTTON №3
         let callback_data = calculated_distance.8;
         let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
-            InlineKeyboardButton::with_url("DEMO BUTTON №3", callback_data.to_string()),
+            InlineKeyboardButton::with_url("Посмотреть на карте", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
         // dbg!("F");
