@@ -2,7 +2,10 @@
 
 use geo::prelude::*;
 use geo::point;
-use carapax::types::{Message, MessageData, InputFile, InlineKeyboardButton};
+use carapax::types::{
+	Message, MessageData, InputFile, 
+	InlineKeyboardButton,
+};
 use carapax::methods::SendPhoto;
 use carapax::{
     longpoll::LongPoll,
@@ -13,14 +16,16 @@ use carapax::{
 use dotenv::dotenv;
 use std::env;
 
-use std::path::Path;
-
-use crate::catalog::CoffeeHouse;
 use crate::catalog::kofe_list;
 
 use serde::{Deserialize, Serialize};
 
 mod catalog;
+
+pub enum InlineKeyboardButtonKind {
+    Url(String),
+    CallbackData(String),
+}
 
 #[derive(Deserialize, Serialize)]
 struct CallbackData {
@@ -32,7 +37,7 @@ impl CallbackData {
         Self { value: value.into() }
     }
 }
-
+// URL
 #[derive(Deserialize, Serialize)]
 struct Url {
     value: String,
@@ -70,46 +75,52 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         let lon = location.longitude;
         let lat = location.latitude;
         let calculated_distance = distance(lon, lat);
-// 1st Cafe
-		api.execute(
-			SendPhoto::new(
-				chat_id.clone(),
-				InputFile::path(calculated_distance.1).await.unwrap()
-			).caption(calculated_distance.0)
-		).await?;
-// BUTTON
-		let callback_data = CallbackData::new("hello!");
-        let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
-            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №1", &callback_data).unwrap(),
+        // 1st Cafe
+        api.execute(
+            SendPhoto::new(
+                chat_id.clone(),
+                InputFile::path(calculated_distance.1.clone())
+                    .await
+                    .unwrap(),
+            )
+            .caption(calculated_distance.0),
+        )
+        .await?;
+        // BUTTON №1
+        let callback_data = "https://duckduckgo.com/";
+        let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
+            InlineKeyboardButton::with_url("DEMO BUTTON №1", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
-// 2nd Cafe
-		api.execute(
-			SendPhoto::new(
-				chat_id.clone(),
-				InputFile::path(calculated_distance.3).await.unwrap()
-			).caption(calculated_distance.2)
-		).await?;
-// BUTTON
-		let callback_data = CallbackData::new("hello!");
-        let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
-            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №2", &callback_data).unwrap(),
+        // 2nd Cafe
+        api.execute(
+            SendPhoto::new(
+                chat_id.clone(),
+                InputFile::path(calculated_distance.3).await.unwrap(),
+            )
+            .caption(calculated_distance.2),
+        )
+        .await?;
+        // BUTTON №2
+        let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
+            InlineKeyboardButton::with_url("DEMO BUTTON №2", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
-// 3rd Cafe
-		api.execute(
-			SendPhoto::new(
-				chat_id.clone(),
-				InputFile::path(calculated_distance.5).await.unwrap()
-			).caption(calculated_distance.4)
-		).await?;
-// BUTTON
-		let callback_data = CallbackData::new("hello!");
-        let method = SendMessage::new(chat_id.clone(), "how to remove this crap?").reply_markup(vec![vec![
-            InlineKeyboardButton::with_callback_data_struct("DEMO BUTTON №3", &callback_data).unwrap(),
+        // 3rd Cafe
+        api.execute(
+            SendPhoto::new(
+                chat_id.clone(),
+                InputFile::path(calculated_distance.5).await.unwrap(),
+            )
+            .caption(calculated_distance.4),
+        )
+        .await?;
+        // BUTTON №3
+        let method = SendMessage::new(chat_id.clone(), "🔗").reply_markup(vec![vec![
+            InlineKeyboardButton::with_url("DEMO BUTTON №3", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
-    // dbg!("F");
+        // dbg!("F");
     };
     Ok(())
 }
