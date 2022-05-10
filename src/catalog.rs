@@ -20,7 +20,6 @@ Stamba cafe
 Открыты с 8:00 до 2:00 ночи
 ✅ альтернативный кофе: воронка, аэропресс, фильтр 
 ✅ можно с ноутбуками
-Адрес: Merab Kostava St. 14
 Инстаграм: https://www.instagram.com/cafe.stamba"),
             photo: String::from("src/resources/stamba_cafe.jpg"),
             google_maps: String::from("https://goo.gl/maps/hCTRnHS5NJYdLkNk9"),
@@ -36,7 +35,6 @@ Stamba cafe
 Открыты 10:00-18:00 (понедельник выходной)
 ❌ альтернативный кофе: нет 
 ❌не рекомендуем брать ноутбук, место не с рабочей атмосферой
-Адрес: Khudadovi, 38
 Инстаграм: https://www.instagram.com/gardeniashevardnadze"),
             photo: String::from("src/resources/gardeniya_shevarnadze.jpg"),
             google_maps: String::from("https://goo.gl/maps/x3DWwAzxnvQ2CwmT6"),
@@ -52,7 +50,6 @@ Stamba cafe
 Большинство мест открываются в 11-12, Milk будням открывается с 9.
 ❌ альтернативный кофе: нет, но есть холодные кофейные напитки 
 ✅  можно с ноутбуками
-Адрес: Ninoshvili str.8
 Инстаграм: http://instagram.com/fabrika_tbilisi"),
             photo: String::from("src/resources/fabrika.jpg"),
             google_maps: String::from("https://g.page/FabrikaTbilisi?share"),
@@ -68,7 +65,6 @@ Erti Kava
 Открыты 8:00-21:00
 ✅ альтернативный кофе: фильтр, воронка, бариста сет, аэропресс
 ✅ можно с ноутбуками, есть wi-fi
-Адрес: Mitropan Laghidze St, 8
 Инстаграм: http://instagram.com/ertikava_coffeeroom"),
             photo: String::from("src/resources/erti_kava.jpg"),
             google_maps: String::from("https://goo.gl/maps/k5BpnCZsRBkwENsD8"),
@@ -84,7 +80,6 @@ Stories
 Открыты 9:00-20:00 (в выходные с 10)
 ✅ альтернативный кофе: фильтр, воронка, аэропресс
 ✅ можно с ноутбуками
-Адрес: 9 Galaktion Tabidze St
 Инстаграм: https://www.instagram.com/stories.tbilisi/?hl=en"),
             photo: String::from("src/resources/stories.jpg"),
             google_maps: String::from("https://goo.gl/maps/TZQM5TZWkEwQ37HK8"),
@@ -100,7 +95,6 @@ Coffee Lab
 Открыты 9:00-22:00
 ✅ альтернативный кофе: на любой вкус, выбор огромный
 ✅ можно с ноутбуками, есть wi-fi
-Адрес: 27 Alexander Kazbegi Ave
 Инстаграм: https://www.instagram.com/coffeelabgeorgia/?hl=en"),
             photo: String::from("src/resources/coffee_lab.jpg"),
             google_maps: String::from("https://goo.gl/maps/2daWAVhDAbjVUpxVA"),
@@ -116,9 +110,7 @@ Luicoffee
 Открыты круглосуточно! 
 ✅ альтернативный кофе:можно заказать V60, фильтра нет
 ✅ можно с ноутбуками
-Адрес: 23-23a Chavchavadze Ave
-Инстаграм: https://www.instagram.com/luicoffee
-Google maps: https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
+Инстаграм: https://www.instagram.com/luicoffee"),
             photo: String::from("src/resources/luicoffee.jpg"),
             google_maps: String::from("https://goo.gl/maps/BEvtVVwNFtSoehjG7"),
             location_x: 41.709292,
@@ -133,7 +125,6 @@ Kikliko переводится как «кукареку». Это традиц�
 Открыты 8 - 15 (выходные с 9 до 16)
 ❌ альтернативный кофе: нет
 ✅ можно с ноутбуками
-Адрес: 28 Mtskheta St
 Инстаграм: https://www.instagram.com/kikliko_"),
             photo: String::from("src/resources/kikliko.jpg"),
             google_maps: String::from("https://g.page/Kikliko?share"),
@@ -149,7 +140,6 @@ Lolita
 Открыты с 11 до 2:00 ночи 
 ✅ альтернативный кофе: есть только фильтр
 ✅ можно с ноутбуками, есть wi-fi
-Адрес: 7 Tamar Chovelidze St
 Инстаграм: https://www.instagram.com/lolita.tbilisi"),
             photo: String::from("src/resources/lolita.jpg"),
             google_maps: String::from("https://goo.gl/maps/QiATrYmw8xHcVaT59"),
@@ -165,7 +155,6 @@ Maria Magdalena
 Открыты 11:00-23:00
 ❌ альтернативный кофе: нет
 ❌не рекомендуем брать ноутбук, место не с рабочей атмосферой
-Адрес: 5 Mikheil Zandukeli Dead End
 Инстаграм: https://www.instagram.com/mariamagdalina.tbilisi"),
             photo: String::from("src/resources/maria_magdalena.jpg"),
             google_maps: String::from("https://goo.gl/maps/DdRrKJpU12Q3yB7R9"),
@@ -181,7 +170,6 @@ Kikodze
 Открыты с 9 до 1:00 ночи (в пятницу и субботу работают до 3 ночи)
 ❌ альтернативный кофе: нет
 ✅ можно с ноутбуками, есть wi-fi
-Адрес: 1 Vasil Petriashvili Street
 Инстаграм: https://www.instagram.com/kikodzebar"),
             photo: String::from("src/resources/kikodze.jpg"),
             google_maps: String::from("https://goo.gl/maps/vWikLD4v2fL8ZpV97"),
@@ -197,7 +185,6 @@ Shavi Coffee
 Режим работы с 8:00 до 21:00
 ✅ альтернативный кофе: да, полный ассортимент
 ✅ можно с ноутбуками, но мало места, есть wi-fi
-Адрес: 40 Zandukeli Street
 Инстаграм: https://www.instagram.com/shavi.coffee"),
             photo: String::from("src/resources/shavi_coffee.jpg"),
             google_maps: String::from("https://goo.gl/maps/UaKHDeA3zXddsv7ZA"),
@@ -213,7 +200,6 @@ PULP
 Открыты Пн-Чт 9:30-19, Пт 9:30-20, Сб 10-20, Вс 10-18
 ✅ альтернативный кофе: да, полный ассортимент
 ✅ можно с ноутбуками, есть wi-fi
-Адрес: 22 Simon Janashia
 Инстаграм: https://www.instagram.com/pulp.tbilisi/?hl=en"),
             photo: String::from("src/resources/pulp.jpg"),
             google_maps: String::from("https://goo.gl/maps/LNZq645yt9CwP7WdA"),
@@ -229,7 +215,6 @@ They said books
 Открыты с 12 до 9 вечера
 ✅ альтернативный кофе: есть фильтр
 ✅ можно с ноутбуками
-Адрес: 10 Giorgi Akhvlediani St
 Инстаграм: https://www.instagram.com/theysaidbooks.coffeeshop"),
             photo: String::from("src/resources/they_said_books.jpg"),
             google_maps: String::from("https://goo.gl/maps/EkA2guZ6e5L9bZpq6"),
@@ -245,9 +230,7 @@ Daily grind
 Открыты с 8 до 12 вечера
 ✅ альтернативный кофе: есть фильтр, аэропресс, воронка
 ❌места мало
-Адрес: 4 Kote Afkhazi St
-Инстаграм: https://www.instagram.com/dailygrindtbilisi
-Google maps: https://goo.gl/maps/X4DbGjH63gpp91m19"),
+Инстаграм: https://www.instagram.com/dailygrindtbilisi"),
             photo: String::from("src/resources/daily_grind.jpg"),
             google_maps: String::from("https://goo.gl/maps/X4DbGjH63gpp91m19"),
             location_x: 41.693138,
@@ -262,7 +245,6 @@ Black Cup x Valiko Bar
 Режим работы с 18 до 23:00
 ✅ альтернативный кофе: есть воронка, аэропресс (а еще кофе с лимоном и апельсиновым фрешем)
 ❌ не рекомендуем брать ноутбук, место не с рабочей атмосферой
-Адрес: 24 Galaktion Tabidze Street
 Инстаграм: https://www.instagram.com/valiko.mansion"),
             photo: String::from("src/resources/black_cup_x_valiko_bar.jpg"),
             google_maps: String::from("https://goo.gl/maps/hx7Wvg9fSSQrwkfWA"),
@@ -278,7 +260,6 @@ Eleven.window
 Открыты 10:00 - 21:00
 ✅ альтернативный кофе: есть фильтр, воронка
 ✅ можно с ноутбуками, есть wi-fi
-Адрес: 6 Niaghvari St
 Инстаграм: https://www.instagram.com/eleven.window
 Google maps: https://goo.gl/maps/pxGFnwdBR1SbbKmX6"),
             photo: String::from("src/resources/eleven_window.jpg"),
@@ -295,7 +276,6 @@ Nur
 Открыты будни 10:00 - 19:00 ( выходные 11:00 - 18:00)
 ✅ альтернативный кофе: да, полный ассортимент
 ❌ кофейня очень маленькая, не расположиться с ноутом комфортно
-Адрес: Lado Kavsadze 7
 Инстаграм: https://www.instagram.com/nur_coffeeshop"),
             photo: String::from("src/resources/nur.jpg"),
             google_maps: String::from("https://g.page/small-local-coffee-shop?share"),
@@ -311,7 +291,6 @@ Lamarzocco
 Открыты 8:30 - 18:30 (по выходным работают до 21)
 ✅ альтернативный кофе: да, воронка и не только
 ❌ кофейня маленькая, не расположиться комфортно с ноутбуком
-Адрес: Ilia Chavchavadze 27
 Инстаграм: https://www.instagram.com/lamarzoccoespressobar
 Google maps: https://goo.gl/maps/oRNzGXPBcths3eDL6"),
             photo: String::from("src/resources/lamarzocco.jpg"),
@@ -328,7 +307,6 @@ Jupiter
 Открыты 8 - 23 
 ✅ альтернативный кофе: да, воронка и не только
 ✅ можно с ноутбуками, есть wi-fi
-Адрес: Ivane Machabeli 4
 Инстаграм: https://www.instagram.com/jupiter.tbilisi"),
             photo: String::from("src/resources/jupiter.jpg"),
             google_maps: String::from("https://goo.gl/maps/7hf4dxxduD3WupdF7"),
@@ -344,7 +322,6 @@ Sol • სოლ
 Открыты 08:00-22:00 
 ❌ альтернативный кофе: нет
 ✅ можно с ноутбуками
-Адрес: 28 Vasil Petriashvili Street
 Инстаграм: https://www.instagram.com/sol.tbilisi/?hl=ru"),
             photo: String::from("src/resources/sol.jpg"),
             google_maps: String::from("https://goo.gl/maps/d6LB8nybZ3BiRUGr6"),
@@ -360,7 +337,6 @@ Mondo Coffee
 Открыты 09 - 20 
 ✅ альтернативный кофе: да
 ❌ мало места, не для работы с ноутбуком
-Адрес: 13 a Ivane Tarkhnishvili St
 Инстаграм: https://www.instagram.com/mondogeorgia"),
             photo: String::from("src/resources/mondo_coffee.jpg"),
             google_maps: String::from("https://goo.gl/maps/xG7dtLGMxHk6NxP36"),
@@ -376,7 +352,6 @@ Shukura
 Режим работы с 8:00 до 23:00
 ✅ альтернативный кофе: да
 ✅ немного места, но можно расположиться с ноутбуком
-Адрес: 49 Irakli Abashidze Street
 Инстаграм: https://www.instagram.com/shukura.coffee/?hl=ru"),
             photo: String::from("src/resources/shukura.jpg"),
             google_maps: String::from("https://goo.gl/maps/iBtE5girFjLRjUGr8"),
@@ -392,7 +367,6 @@ Erti Kava
 Открыты 8:00-21:00
 ✅ альтернативный кофе: фильтр, воронка, бариста сет, аэропресс
 ✅ можно с ноутбуками, есть wi-fi
-Адрес: 81 Irakli Abashidze Street
 Инстаграм: http://instagram.com/ertikava_coffeeroom/?hl=en"),
             photo: String::from("src/resources/erti_kava.jpg"),
             google_maps: String::from("https://goo.gl/maps/2138Kbu6YRgDfpQx9"),
@@ -408,7 +382,6 @@ Books from past
 Открыты 12:00-20:00
 ✅ альтернативный кофе: фильтр 
 ✅ можно с ноутбуками
-Адрес: 10 Giorgi Akhvlediani St, flat 2
 Инстаграм: https://www.instagram.com/booksfrompast.shop"),
             photo: String::from("src/resources/books_from_past.jpg"),
             google_maps: String::from("https://goo.gl/maps/fNmSkXiijs65GNcj8"),
@@ -422,9 +395,7 @@ Books from past
 Depo
 Неприметное здание с приятным пространством внутри и летней веранда на крыше (тбилисский руфтоп, не имеющий ничего общего с московским фудкортом). Регулярно что-то происходит — диджей-сеты, маркеты, благотворительные ивенты. С 10:00 до 14:00 сервируют завтраки, а обеды —  с 12:00 до 16:00 по будням (2 блюда за 20Gel, топовый томатный копчёный суп).
 Открыты 10:00-00:00
-Адрес: Shalva Ghambashldze, 10
-Инстаграм: https://www.instagram.com/depo.tbilisi/
-Google maps: https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
+Инстаграм: https://www.instagram.com/depo.tbilisi/"),
             photo: String::from("src/resources/depo.jpg"),
             google_maps: String::from("https://goo.gl/maps/Wj4kqwcTjEJ9KVm36"),
             location_x: 41.708348,
@@ -439,9 +410,7 @@ ComUNITY of specialty coffee admirers — указано в инстаграме
  Открыты 8-15:00 (т.к. кофейня только появилась, режим может меняться, проверяйте в инстаграм)
 ✅ альтернативный кофе: есть
 ✅ можно с ноутбуками, но места немного
-Адрес: Shalva Dadiani, 20
-Инстаграм: https://www.instagram.com/unity_kava/
-Google maps: https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
+Инстаграм: https://www.instagram.com/unity_kava/"),
             photo: String::from("src/resources/unity_kava.jpg"),
             google_maps: String::from("https://goo.gl/maps/uLTnN8h7vvWC6fkLA"),
             location_x: 41.691128,
@@ -456,9 +425,7 @@ APC
 Открыты ВТ-ЧТ 10:00-20:00, ПТ-ВС 11:00-21:00
 ❌альтернативный кофе: нет
 ❌не расположиться комфортно с ноутбуком
-Адрес: 10 I.Abashidze 
-Инстаграм: https://www.instagram.com/apc.georgia/
-Google maps: https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
+Инстаграм: https://www.instagram.com/apc.georgia/"),
             photo: String::from("src/resources/apc.jpg"),
             google_maps: String::from("https://goo.gl/maps/fpUgRZEc15Akw7GN7"),
             location_x: 41.706840,
@@ -473,9 +440,7 @@ Sablée
 Открыты c 09:00 до 22:00
 ❌альтернативный кофе: нет
 ❌не расположиться комфортно с ноутбуком
-Адрес: Kekelidze street 1
-Фейсбук: https://www.facebook.com/sableebakery/
-Google maps: https://goo.gl/maps/SqyQqSWqJLPBhq298"),
+Фейсбук: https://www.facebook.com/sableebakery/"),
             photo: String::from("src/resources/sablee.jpg"),
             google_maps: String::from("https://goo.gl/maps/SqyQqSWqJLPBhq298"),
             location_x: 41.708389,
@@ -490,9 +455,7 @@ Groovy roasters
 Открыты с 8 до 8
 ✅альтернативный кофе: V60, аэропресс, фильтр, есть матча
 ✅можно с ноутбуком
-Адрес: Ninoshvili 17
-Инстаграм: https://www.instagram.com/groovyroasters/
-Google maps: https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
+Инстаграм: https://www.instagram.com/groovyroasters/"),
             photo: String::from("src/resources/groovy_roasters.jpg"),
             google_maps: String::from("https://goo.gl/maps/2CVxQkwiHB1sbnhb6"),
             location_x: 41.711521,
