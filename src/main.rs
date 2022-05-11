@@ -124,10 +124,9 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         api.execute(method).await?;
         // dbg!("F");
     } else {
-		let warning_message = "Добро пожаловать, бла бла, для того, чтобы найти ближайшие кафе, пожалуйста пришлите свою гео-позицию".to_string();
+		let warning_message = "Привет! Чтобы найти ближайшую кофейню, пожалуйста пришли свою гео-локацию в этот чат.".to_string();
 		let method = SendMessage::new(chat_id.clone(), warning_message);
         api.execute(method).await?;
-//"Добро пожаловать, бла бла, для того, чтобы найти ближайшие кафе, пожалуйста пришлите свою гео-позицию"
 	};
     Ok(())
 }
