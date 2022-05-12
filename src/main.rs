@@ -4,7 +4,7 @@ use geo::prelude::*;
 use geo::point;
 use carapax::types::{
 	Message, MessageData, InputFile, 
-	InlineKeyboardButton,
+	InlineKeyboardButton, TextEntity,
 };
 use carapax::methods::SendPhoto;
 use carapax::{
@@ -15,10 +15,10 @@ use carapax::{
 };
 use dotenv::dotenv;
 use std::env;
+use carapax::types::User;
+use serde::{Deserialize, Serialize};
 
 use crate::catalog::kofe_list;
-
-use serde::{Deserialize, Serialize};
 
 mod catalog;
 
@@ -67,12 +67,16 @@ String, String, String
 }
 
 async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), ExecuteError> {
+	//let method = SendMessage::new(chat_id.clone(), "TEST".to_string()).reply_markup(vec![vec![
+        //InlineKeyboardButton::with_url("📍Посмотреть на карте", "https://duckduckgo.com/".to_string()),
+    //]]);
+    //api.execute(method).await?;
     // dbg!(&message);
     if let MessageData::Location(location) = message.data {
         let lon = location.longitude;
         let lat = location.latitude;
         let calculated_distance = distance(lon, lat);
-        // 1st Cafe
+// 1st Cafe
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
@@ -80,11 +84,14 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
                     .await
                     .unwrap(),
             )
-            .caption(calculated_distance.0),
+            .caption(calculated_distance.0)
+            .caption_entities(&[TextEntity::italic(0..10)]).unwrap(),
         )
         .await?;
 // BUTTON №1
-        let method = SendMessage::new(chat_id.clone(), calculated_distance.3.to_string()).reply_markup(vec![vec![
+        let method = SendMessage::new(
+			chat_id.clone(), calculated_distance.3.to_string()
+		).reply_markup(vec![vec![
             InlineKeyboardButton::with_url(
             	"📍Посмотреть на карте", calculated_distance.2.to_string()
             ),
@@ -96,29 +103,34 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
                 chat_id.clone(),
                 InputFile::path(calculated_distance.5).await.unwrap(),
             )
-            .caption(calculated_distance.4),
+            .caption(calculated_distance.4)
+            .caption_entities(&[TextEntity::italic(0..10)]).unwrap(),
         )
         .await?;
-        // BUTTON №2
-        let callback_data = calculated_distance.6;
-        let method = SendMessage::new(chat_id.clone(), calculated_distance.7.to_string()).reply_markup(vec![vec![
-            InlineKeyboardButton::with_url("📍Посмотреть на карте", callback_data.to_string()),
+// BUTTON №2
+        let method = SendMessage::new(
+			chat_id.clone(), calculated_distance.7.to_string()
+		).reply_markup(vec![vec![
+            InlineKeyboardButton::with_url(
+				"📍Посмотреть на карте", calculated_distance.6.to_string()),
         ]]);
         api.execute(method).await?;
-        // 3rd Cafe
+// 3rd Cafe
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
                 InputFile::path(calculated_distance.9).await.unwrap(),
             )
-            .caption(calculated_distance.8),
+            .caption(calculated_distance.8)
+            .caption_entities(&[TextEntity::italic(0..10)]).unwrap(),
         )
         .await?;
 // BUTTON №3
-        let callback_data = calculated_distance.10;
-        let method = SendMessage::new(chat_id.clone(), calculated_distance.11.to_string()).reply_markup(vec![vec![
+        let method = SendMessage::new(
+			chat_id.clone(), calculated_distance.11.to_string()
+		).reply_markup(vec![vec![
             InlineKeyboardButton::with_url(
-            	"📍Посмотреть на карте", callback_data.to_string()
+            	"📍Посмотреть на карте", calculated_distance.10.to_string()
             ),
         ]]);
         api.execute(method).await?;
