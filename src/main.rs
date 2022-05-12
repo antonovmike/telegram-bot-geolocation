@@ -86,7 +86,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 // BUTTON №1
         let method = SendMessage::new(chat_id.clone(), calculated_distance.3.to_string()).reply_markup(vec![vec![
             InlineKeyboardButton::with_url(
-            	"Посмотреть на карте", calculated_distance.2.to_string()
+            	"📍Посмотреть на карте", calculated_distance.2.to_string()
             ),
         ]]);
         api.execute(method).await?;
@@ -102,7 +102,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         // BUTTON №2
         let callback_data = calculated_distance.6;
         let method = SendMessage::new(chat_id.clone(), calculated_distance.7.to_string()).reply_markup(vec![vec![
-            InlineKeyboardButton::with_url("Посмотреть на карте", callback_data.to_string()),
+            InlineKeyboardButton::with_url("📍Посмотреть на карте", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
         // 3rd Cafe
@@ -118,7 +118,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         let callback_data = calculated_distance.10;
         let method = SendMessage::new(chat_id.clone(), calculated_distance.11.to_string()).reply_markup(vec![vec![
             InlineKeyboardButton::with_url(
-            	"Посмотреть на карте", callback_data.to_string()
+            	"📍Посмотреть на карте", callback_data.to_string()
             ),
         ]]);
         api.execute(method).await?;
