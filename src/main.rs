@@ -85,7 +85,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
                     .unwrap(),
             )
             .caption(calculated_distance.0)
-            .caption_entities(&[TextEntity::italic(0..10)]).unwrap(),
+            .caption_entities(&[TextEntity::bold(0..10)]).unwrap(),
         )
         .await?;
 // BUTTON №1
@@ -104,7 +104,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
                 InputFile::path(calculated_distance.5).await.unwrap(),
             )
             .caption(calculated_distance.4)
-            .caption_entities(&[TextEntity::italic(0..10)]).unwrap(),
+            .caption_entities(&[TextEntity::bold(0..10)]).unwrap(),
         )
         .await?;
 // BUTTON №2
@@ -122,7 +122,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
                 InputFile::path(calculated_distance.9).await.unwrap(),
             )
             .caption(calculated_distance.8)
-            .caption_entities(&[TextEntity::italic(0..10)]).unwrap(),
+            .caption_entities(&[TextEntity::bold(0..10)]).unwrap(),
         )
         .await?;
 // BUTTON №3
