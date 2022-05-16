@@ -15,7 +15,9 @@ use carapax::{
 };
 use dotenv::dotenv;
 use std::env;
+
 use crate::catalog::kofe_list;
+
 use serde::{Deserialize, Serialize};
 
 mod catalog;
@@ -56,14 +58,12 @@ String, String, String
 		));
     }
     temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
-// CAFFEE DESCRIPTION
     let one   = format!("{}\n", temporary_collection[0].1);
     let two   = format!("{}\n", temporary_collection[1].1);
     let three = format!("{}\n", temporary_collection[2].1);
-//   0/4/8  1/5/9 PHOTO                        2/6/10 MAPS                        3/7/11 ADDRESS
-    (one,   temporary_collection[0].2.clone(), temporary_collection[0].3.clone(), temporary_collection[0].4.clone(), 
-     two,   temporary_collection[1].2.clone(), temporary_collection[1].3.clone(), temporary_collection[1].4.clone(), 
-     three, temporary_collection[2].2.clone(), temporary_collection[2].3.clone(), temporary_collection[2].4.clone() )
+    (one, temporary_collection[0].2.clone(), temporary_collection[0].3.clone(), temporary_collection[0].4.clone(), 
+    two, temporary_collection[1].2.clone(), temporary_collection[1].3.clone(), temporary_collection[1].4.clone(), 
+    three, temporary_collection[2].2.clone(), temporary_collection[2].3.clone(), temporary_collection[2].4.clone() )
 }
 
 async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), ExecuteError> {
@@ -72,8 +72,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         let lon = location.longitude;
         let lat = location.latitude;
         let calculated_distance = distance(lon, lat);
-// 1st Cafe
-// 0 description 1 photo 2 maps 3 address
+        // 1st Cafe
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
@@ -92,40 +91,34 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
         ]]);
         api.execute(method).await?;
 // 2nd Cafe
-// 4 description 5 photo 6 maps 7 address
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
-                InputFile::path(calculated_distance.5.clone())
-					.await
-					.unwrap(),
+                InputFile::path(calculated_distance.5).await.unwrap(),
             )
             .caption(calculated_distance.4),
         )
         .await?;
         // BUTTON №2
+        let callback_data = calculated_distance.6;
         let method = SendMessage::new(chat_id.clone(), calculated_distance.7.to_string()).reply_markup(vec![vec![
-            InlineKeyboardButton::with_url(
-            	"📍Посмотреть на карте", calculated_distance.6.to_string()
-            ),
+            InlineKeyboardButton::with_url("📍Посмотреть на карте", callback_data.to_string()),
         ]]);
         api.execute(method).await?;
-// 3rd Cafe
-// 8 description 9 photo 10 maps 11 address
+        // 3rd Cafe
         api.execute(
             SendPhoto::new(
                 chat_id.clone(),
-                InputFile::path(calculated_distance.9.clone())
-					.await
-					.unwrap(),
+                InputFile::path(calculated_distance.9).await.unwrap(),
             )
             .caption(calculated_distance.8),
         )
         .await?;
 // BUTTON №3
+        let callback_data = calculated_distance.10;
         let method = SendMessage::new(chat_id.clone(), calculated_distance.11.to_string()).reply_markup(vec![vec![
             InlineKeyboardButton::with_url(
-            	"📍Посмотреть на карте", calculated_distance.10.to_string()
+            	"📍Посмотреть на карте", callback_data.to_string()
             ),
         ]]);
         api.execute(method).await?;
@@ -134,7 +127,6 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
 		let warning_message = "Привет! Чтобы найти ближайшую кофейню, пожалуйста пришли свою гео-локацию в этот чат.".to_string();
 		let method = SendMessage::new(chat_id.clone(), warning_message);
         api.execute(method).await?;
-//"Добро пожаловать, бла бла, для того, чтобы найти ближайшие кафе, пожалуйста пришлите свою гео-позицию"
 	};
     Ok(())
 }
