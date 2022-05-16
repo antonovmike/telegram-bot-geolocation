@@ -4,8 +4,8 @@ pub struct CoffeeHouse {
     pub description: String,
     pub photo: String,
     pub google_maps: String,
-    pub location_x: f32,
-    pub location_y: f32,
+    pub location_x: f64,
+    pub location_y: f64,
     pub caffee_name: String,
     pub address: String,
 }
