@@ -1,12 +1,9 @@
 #![allow(unused)]
 
-use geo::prelude::*;
-use geo::point;
-use carapax::types::{
-	Message, MessageData, InputFile, 
-	InlineKeyboardButton, TextEntity,
-};
+use crate::catalog::CoffeeHouse;
 use carapax::methods::SendPhoto;
+use carapax::types::User;
+use carapax::types::{InlineKeyboardButton, InputFile, Message, MessageData, TextEntity};
 use carapax::{
     longpoll::LongPoll,
     methods::SendMessage,
@@ -14,132 +11,41 @@ use carapax::{
     Api, App, Context, ExecuteError, Ref,
 };
 use dotenv::dotenv;
-use std::env;
-use carapax::types::User;
+use geo::point;
+use geo::prelude::*;
 use serde::{Deserialize, Serialize};
-
-use crate::catalog::kofe_list;
+use std::env;
 
 mod catalog;
 
-
-#[derive(Deserialize, Serialize)]
-struct CallbackData {
-    value: String,
-}
-
-impl CallbackData {
-    fn new<S: Into<String>>(value: S) -> Self {
-        Self { value: value.into() }
-    }
-}
-
-fn distance(lat_user: f32, lon_user: f32) -> (
-String, String, String, 
-String, String, String, 
-String, String, String, 
-String, String, String
-) {
-    // dbg!(&lat_user);
-    // dbg!(&lon_user);
-    let mut temporary_collection = vec![];
-
-    let point_user = point!(x: lat_user, y: lon_user);
-// ITERATION
-    for index in 0..kofe_list().len() {
-        let point_destination = point!(x: kofe_list()[index].location_x, y: kofe_list()[index].location_y);
-        let calculated_distance: i32 = point_user.haversine_distance(&point_destination).round() as i32;
-        temporary_collection.push((
-			calculated_distance,                    // 0
-			kofe_list()[index].description.clone(), // 1
-			kofe_list()[index].photo.clone(),       // 2
-			kofe_list()[index].google_maps.clone(), // 3
-			kofe_list()[index].address.clone(),     // 4
-		));
-    }
-    temporary_collection.sort_by(|a, b| a.0.cmp(&b.0));
-    let one   = format!("{}\n", temporary_collection[0].1);
-    let two   = format!("{}\n", temporary_collection[1].1);
-    let three = format!("{}\n", temporary_collection[2].1);
-    (one, temporary_collection[0].2.clone(), temporary_collection[0].3.clone(), temporary_collection[0].4.clone(), 
-    two, temporary_collection[1].2.clone(), temporary_collection[1].3.clone(), temporary_collection[1].4.clone(), 
-    three, temporary_collection[2].2.clone(), temporary_collection[2].3.clone(), temporary_collection[2].4.clone() )
-}
-
 async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), ExecuteError> {
-	//let method = SendMessage::new(chat_id.clone(), "TEST".to_string()).reply_markup(vec![vec![
-        //InlineKeyboardButton::with_url("📍Посмотреть на карте", "https://duckduckgo.com/".to_string()),
-    //]]);
-    //api.execute(method).await?;
-    // dbg!(&message);
     if let MessageData::Location(location) = message.data {
-        let lon = location.longitude;
-        let lat = location.latitude;
-        let calculated_distance = distance(lon, lat);
-// 1st Cafe
-        api.execute(
-            SendPhoto::new(
-                chat_id.clone(),
-                InputFile::path(calculated_distance.1.clone())
-                    .await
-                    .unwrap(),
+        for cafe in distance(
+            location.latitude.into(),
+            location.longitude.into(),
+            catalog::kofe_list(),
+        ) {
+            api.execute(
+                SendPhoto::new(chat_id.clone(), InputFile::path(&cafe.photo).await.unwrap())
+                    .caption(&cafe.description)
+                    .caption_entities(&[TextEntity::bold(0..10)])
+                    .expect("Failed to make caption bold."),
             )
-            .caption(calculated_distance.0)
-            .caption_entities(&[TextEntity::bold(0..10)]).unwrap(),
-        )
-        .await?;
-// BUTTON №1
-        let method = SendMessage::new(
-			chat_id.clone(), calculated_distance.3.to_string()
-		).reply_markup(vec![vec![
-            InlineKeyboardButton::with_url(
-            	"📍Посмотреть на карте", calculated_distance.2.to_string()
-            ),
-        ]]);
-        api.execute(method).await?;
-// 2nd Cafe
-        api.execute(
-            SendPhoto::new(
-                chat_id.clone(),
-                InputFile::path(calculated_distance.5).await.unwrap(),
+            .await?;
+            api.execute(
+                SendMessage::new(chat_id.clone(), &cafe.address).reply_markup(vec![vec![
+                    InlineKeyboardButton::with_url("📍Посмотреть на карте",  &cafe.google_maps),
+                ]]),
             )
-            .caption(calculated_distance.4)
-            .caption_entities(&[TextEntity::bold(0..10)]).unwrap(),
-        )
-        .await?;
-// BUTTON №2
-        let method = SendMessage::new(
-			chat_id.clone(), calculated_distance.7.to_string()
-		).reply_markup(vec![vec![
-            InlineKeyboardButton::with_url(
-				"📍Посмотреть на карте", calculated_distance.6.to_string()),
-        ]]);
-        api.execute(method).await?;
-// 3rd Cafe
-        api.execute(
-            SendPhoto::new(
-                chat_id.clone(),
-                InputFile::path(calculated_distance.9).await.unwrap(),
-            )
-            .caption(calculated_distance.8)
-            .caption_entities(&[TextEntity::bold(0..10)]).unwrap(),
-        )
-        .await?;
-// BUTTON №3
-        let method = SendMessage::new(
-			chat_id.clone(), calculated_distance.11.to_string()
-		).reply_markup(vec![vec![
-            InlineKeyboardButton::with_url(
-            	"📍Посмотреть на карте", calculated_distance.10.to_string()
-            ),
-        ]]);
-        api.execute(method).await?;
-        // dbg!("F");
+            .await?;
+        }
     } else {
-		let warning_message = "Привет! Чтобы найти ближайшую кофейню, пожалуйста пришли свою гео-локацию в этот чат.".to_string();
-		let method = SendMessage::new(chat_id.clone(), warning_message);
-        api.execute(method).await?;
-	};
+        api.execute(SendMessage::new(
+            chat_id.clone(),
+            "Привет! Чтобы найти ближайшую кофейню, пожалуйста пришли свою гео-локацию в этот чат.",
+        ))
+        .await?;
+    };
     Ok(())
 }
 
@@ -156,4 +62,55 @@ async fn main() {
 
     let app = App::new(context, echo);
     LongPoll::new(api, app).run().await
+}
+
+fn distance(
+    lat_user: f64,
+    lon_user: f64,
+    mut list_of_coffe_houses: [CoffeeHouse; 30],
+) -> Vec<CoffeeHouse> {
+    let point_user = point!(x: lat_user, y: lon_user);
+    list_of_coffe_houses.sort_by(|a, b| {
+        let distance_a = point_user.geodesic_distance(&point!(x: a.location_x, y: a.location_y));
+        let distance_b = point_user.geodesic_distance(&point!(x: b.location_x, y: b.location_y));
+        distance_a
+            .abs()
+            .partial_cmp(&distance_b.abs())
+            .expect("Failed to compare points.")
+    });
+    list_of_coffe_houses.into_iter().take(3).collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_distance_gives_right_order() {
+        let point0 = (41.6963678, 44.8199377);
+        let point1 = (41.7255743, 44.746247);
+        let point2 = (41.7106533, 44.7447204);
+        let list_of_coffe_houses = catalog::kofe_list();
+        let distance_to_point_0 = distance(point0.0, point0.1, list_of_coffe_houses.clone());
+        let distance_to_point_1 = distance(point1.0, point1.1, list_of_coffe_houses.clone());
+        let distance_to_point_2 = distance(point2.0, point2.1, list_of_coffe_houses.clone());
+        assert_ne!(distance_to_point_0, distance_to_point_1);
+        assert_ne!(distance_to_point_1, distance_to_point_2);
+        assert_ne!(distance_to_point_2, distance_to_point_0);
+        dbg!(distance_to_point_0);
+        dbg!(distance_to_point_1);
+        dbg!(distance_to_point_2);
+    }
+
+    #[test]
+    fn test_tbilisi() {
+        let point0 = (41.720802, 44.721416);
+        let point1 = (41.727481, 44.793525);
+        let list_of_coffe_houses = catalog::kofe_list();
+        let distance_to_point_0 = distance(point0.0, point0.1, list_of_coffe_houses.clone());
+        let distance_to_point_1 = distance(point1.0, point1.1, list_of_coffe_houses.clone());
+        assert_ne!(distance_to_point_0, distance_to_point_1);
+        dbg!(distance_to_point_0);
+        dbg!(distance_to_point_1);
+    }
 }
