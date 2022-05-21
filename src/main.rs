@@ -1,9 +1,10 @@
 #![allow(unused)]
+use std::ops::Not;
 
 use crate::catalog::CoffeeHouse;
 use carapax::methods::SendPhoto;
 use carapax::types::User;
-use carapax::types::{InlineKeyboardButton, InputFile, Message, MessageData, TextEntity};
+use carapax::types::{KeyboardButton, InlineKeyboardButton, InputFile, Message, MessageData, TextEntity};
 use carapax::{
     longpoll::LongPoll,
     methods::SendMessage,
@@ -25,10 +26,14 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
             location.longitude.into(),
             catalog::kofe_list(),
         ) {
+			let caffee_description = &cafe.description;
+			let mut vector: Vec<&str> = caffee_description.lines().collect();
+			let name_length: u32 = vector[1].len().try_into().unwrap();
+			
             api.execute(
                 SendPhoto::new(chat_id.clone(), InputFile::path(&cafe.photo).await.unwrap())
                     .caption(&cafe.description)
-                    .caption_entities(&[TextEntity::bold(0..10)])
+                    .caption_entities(&[TextEntity::bold(0..(name_length + 1))])
                     .expect("Failed to make caption bold."),
             )
             .await?;
