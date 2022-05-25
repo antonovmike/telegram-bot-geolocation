@@ -20,6 +20,10 @@ use std::env;
 mod catalog;
 mod start_button;
 
+async fn butt() {
+	unimplemented!()
+}
+
 async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), ExecuteError> {
     if let MessageData::Location(location) = message.data {
         for cafe in distance(
