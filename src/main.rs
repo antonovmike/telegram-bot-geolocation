@@ -4,7 +4,8 @@ use std::ops::Not;
 use crate::catalog::CoffeeHouse;
 use carapax::methods::SendPhoto;
 use carapax::types::User;
-use carapax::types::{KeyboardButton, InlineKeyboardButton, InputFile, Message, MessageData, TextEntity};
+use carapax::types::{KeyboardButton, InlineKeyboardButton, 
+	InputFile, Message, MessageData, TextEntity, Location};
 use carapax::{
     longpoll::LongPoll,
     methods::SendMessage,
@@ -20,7 +21,7 @@ use std::env;
 mod catalog;
 mod start_button;
 
-async fn butt() {
+async fn butt() -> Location {
 	unimplemented!()
 }
 
@@ -73,6 +74,7 @@ async fn main() {
     context.insert(api.clone());
 
     let app = App::new(context, echo);
+    //let app = App::new(context, butt);
     LongPoll::new(api, app).run().await
 }
 
