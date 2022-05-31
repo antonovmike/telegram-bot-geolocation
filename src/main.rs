@@ -53,7 +53,7 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
     } else {
         api.execute(SendMessage::new(
             chat_id.clone(),
-            "Привет! Чтобы найти ближайшую кофейню, пожалуйста пришли свою гео-локацию в этот чат.",
+            "Привет! Чтобы найти ближайшую кофейню, пожалуйста, пришлите свою гео-локацию в чат.",
         ))
         .await?;
     };
