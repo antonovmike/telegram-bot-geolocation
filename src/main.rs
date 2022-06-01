@@ -44,6 +44,11 @@ async fn echo(api: Ref<Api>, chat_id: ChatId, message: Message) -> Result<(), Ex
             )
             .await?;
         }
+        api.execute(SendMessage::new(
+            chat_id.clone(),
+            "Если мы снова вам понадобимся, отправьте гео-локацию в чат ☺️",
+        ))
+        .await?;
     } else {
         api.execute(SendMessage::new(
             chat_id.clone(),
