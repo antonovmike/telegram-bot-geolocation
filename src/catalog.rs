@@ -523,6 +523,187 @@ Groovy roasters
             caffee_name: String::from("Groovy roasters"),
             address: String::from("Ninoshvili 17"),
         },
+// NEW 2022 06 05
+        CoffeeHouse {
+            description: String::from("
+Flowershop73 & Oriental Express bar
+
+Цветочная лавка с эспрессо-баром. Здесь можно взять с собой не только кофе, но и букет цветов. Если не хотите кофе, скажите бартендеру, что вы любите, и он обязательно замиксует что-нибудь вкусное:) 
+
+Открыты c 10 до 01
+✅альтернативный кофе: да
+❌не рекомендуем брать ноутбук, мало места, не рабочая атмосфера
+
+Инстаграм: https://www.instagram.com/_oriental.express_/"),
+            photo: String::from("src/resources/Flowershop73_Oriental_Express bar.jpg"),
+            google_maps: String::from("https://goo.gl/maps/nn3tRZzQtgurubMF6"),
+            location_x: 41.7071265,
+            location_y: 44.7777937,
+            caffee_name: String::from("Flowershop73 & Oriental Express bar"),
+            address: String::from("73 Vasil Barnov St"),
+        },
+        CoffeeHouse {
+            description: String::from("
+Kvarts coffee
+
+Фишка этой арт-кофейни в том, что на вашем стаканчике с кофе будет ваш портрет. Если захотите, конечно, это бесплатно, но нужно будет подождать. Кофе здесь хороший, а горячий шоколад еще лучше. Также можно заказать бутылку вина или чачу с портретом — классный вариант подарка!
+
+Открыты с 10 до 10
+✅альтернативный кофе: да
+❌не рекомендуем брать ноутбук, не рабочая атмосфера
+ 
+Инстаграм: https://www.instagram.com/kvartscoffee/"),
+            photo: String::from("src/resources/Kvarts_coffee.jpg"),
+            google_maps: String::from("https://g.page/kvartscoffee?share"),
+            location_x: 41.7005049,
+            location_y: 44.7954761,
+            caffee_name: String::from("Kvarts coffee"),
+            address: String::from("26 Shota Rustaveli Ave"),
+        },
+        CoffeeHouse {
+            description: String::from("
+Santino
+
+Кофейня рядом с Площадью Орбелиани. Самый большой выбор кофе в Тбилиси (разных стран и форматов + есть декаф). Люксовый интерьер. Завтраки весь день. 
+
+Открыты 9:00-23:00
+✅альтернативный кофе: да
+✅можно с ноутбуком
+
+Инстаграм: https://www.instagram.com/santino.tbilisi/"),
+            photo: String::from("src/resources/Santino.jpg"),
+            google_maps: String::from("https://goo.gl/maps/L3tacoGE45bvKVv96"),
+            location_x: 41.6964009,
+            location_y: 44.8011529,
+            caffee_name: String::from("Santino"),
+            address: String::from("15 Atoneli St"),
+        },
+        CoffeeHouse {
+            description: String::from("
+Kona Flowers and Coffee shop
+
+Магазин цветов и кофейня в одном месте. Можно заказать любой букет от ромашек в тряпичной сумочке до свадебного букета. На улице есть пара столиков, чтобы выпить кофе и съесть круассан.
+
+Открыты с 10 до 20
+❌альтернативный кофе: нет
+❌не рекомендуем брать ноутбук, мало места
+
+Инстаграм: https://www.instagram.com/kona.flowerandcoffee/"),
+            photo: String::from("src/resources/Кona.jpg"),
+            google_maps: String::from("https://goo.gl/maps/jyBpPq3bb7UHAvcG9"),
+            location_x: 41.7084959,
+            location_y: 44.7799656,
+            caffee_name: String::from("Kona Flowers and Coffee shop"),
+            address: String::from("23 Petre Melikishvili St"),
+        },
+        CoffeeHouse {
+            description: String::from("
+Coffee and Culture
+
+Кофейня в Сабуртало с библиотекой книг и настольных игр. Есть хороший wi-fi и сытная еда (завтраки, сэндвичи, супы) и, конечно, десерты. 
+
+Открыты 09:00-22:00 (ВС 15:00-22:00)
+✅альтернативный кофе: есть
+✅можно с ноутбуком
+
+Инстаграм: https://www.instagram.com/coffeeandculturegeorgia/"),
+            photo: String::from("src/resources/Coffee_and_Culture.jpg"),
+            google_maps: String::from("https://g.page/coffee-and-culture?share"),
+            location_x: 41.7283029,
+            location_y: 44.7714755,
+            caffee_name: String::from("Coffee and Culture"),
+            address: String::from("22 Zhiuli Shartava St"),
+        },
+        CoffeeHouse {
+            description: String::from("
+Namu
+
+Основательница этого веганского кафе, шеф-повар и психолог Ануки Такарадзе, полностью исключила глютен, сахар и продукты животного происхождения в меню Namu. Есть своя комбуча, большая вариация raw-десертов, черный кофе и каппучино на миндальном.
+
+Открыты 08:00-22:00
+✅альтернативный кофе: есть
+✅можно с ноутбуком
+
+Инстаграм: https://www.instagram.com/namuraw/"),
+            photo: String::from("src/resources/Namu.jpg"),
+            google_maps: String::from("https://g.page/namu-tbilisi?share"),
+            location_x: 41.7073552,
+            location_y: 44.7679742,
+            caffee_name: String::from("Namu"),
+            address: String::from("24 Irakli Abashidze Street"),
+        },
+        CoffeeHouse {
+            description: String::from("
+BNKR 
+
+Спешелти уголок. Можно посмотреть симпатичные репродукции картин, пока ждёшь гранатовый кемекс или апельсиновый кофе. Есть и обычный черный кофе, и чай, и какао.
+
+Открыты 10:00-22:00
+✅альтернативный кофе: есть
+✅можно с ноутбуком, но места мало
+
+Инстаграм: https://www.instagram.com/bnkr_coffee_georgia/"),
+            photo: String::from("src/resources/BNKR.jpg"),
+            google_maps: String::from("https://goo.gl/maps/LBhBwjHatmi97YtJ6"),
+            location_x: 41.6987409,
+            location_y: 44.7945106,
+            caffee_name: String::from("BNKR"),
+            address: String::from("19 Atoneli St"),
+        },
+        CoffeeHouse {
+            description: String::from("
+Plant Lovers 
+
+Зеленый домик, где можно взять кофе по пути к фуникулеру (зерно Coffee Lab). Еще здесь есть вино, снэки, а на завтрак можно съесть авокадо тост. Ну и, конечно, здесь можно приобрести растения. 
+
+Открыты 10:00-21:00
+✅альтернативный кофе: есть
+❌не рекомендуем брать ноутбук, мало места
+
+Инстаграм: https://www.instagram.com/plantloverstbilisi/"),
+            photo: String::from("src/resources/Plants_lovers.jpg"),
+            google_maps: String::from("https://goo.gl/maps/1Cv4TaAkBTdVCq5F9"),
+            location_x: 41.6954993,
+            location_y: 44.792085,
+            caffee_name: String::from("Plant Lovers "),
+            address: String::from("4a Niaghvari St"),
+        },
+        CoffeeHouse {
+            description: String::from("
+Red Man Cafe
+
+Концепция: кофе и коктейли. Есть красный эспрессо — это чай ройбуш, который готовят таким же способом, как кофе. Подают воду бесплатно — приятная мелочь, которая пока не очень распространена в тбилисских кофейнях.
+
+Открыты 09:00-21:00
+✅альтернативный кофе: есть
+✅можно с ноутбуком
+
+Инстаграм: https://www.instagram.com/redman_cafe/"),
+            photo: String::from("src/resources/Red_man.jpg"),
+            google_maps: String::from("https://goo.gl/maps/nkXLw1dNYHRiuvDv8"),
+            location_x: 41.7050015,
+            location_y: 44.7813522,
+            caffee_name: String::from("Red Man Cafe"),
+            address: String::from("32-34 Erekle Tatishvili St"),
+        },
+        CoffeeHouse {
+            description: String::from("
+Puri Guliani EXPRESS
+
+Вторая точка от ресторана Puri Guliani, который славится лучшими пончиками в городе. Рано открываются, большой выбор завтраков, есть столики на улице. 
+
+Открыты 08:00-22:00
+✅альтернативный кофе: есть
+❌не рекомендуем брать ноутбук
+
+https://www.instagram.com/puri.guliani/"),
+            photo: String::from("src/resources/Puri_Guliani.jpg"),
+            google_maps: String::from("https://g.page/Puriguliani_EXPRESS?share"),
+            location_x: 41.7080528,
+            location_y: 44.763405,
+            caffee_name: String::from("Puri Guliani EXPRESS"),
+            address: String::from("37 Irakli Abashidze Street"),
+        },
     ];
     kmk
 }
